@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!--Head-->
+
+<head>
+	<!--Meta-->
+	<meta charset="utf-8">
+	<!--Title-->
+	<title>Hire Humanly</title>
+	<!--Viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes">
+	<!--Font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700" />
+	<!--Main-->
+	<link rel="stylesheet" href="css/main.css" />
+	<!--Favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<!--.header - _header.pug-->
+	<header class="header">
+		<!--.header-mobile - visible in tablet/mobile-->
+		<div class="header-mobile d-lg-none">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-2 col-6">
+						<!--.logo-->
+						<a href="dashboard-home.html">
+							<img class="logo" src="img/tpl/logo.png" alt="Hire Humanly">
+						</a>
+					</div>
+					<!--menu button-->
+					<div class="col-6">
+						<button class="navbar-toggler js-navbar-show" type="button" data-target="#menu"><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.header-mobile-->
+		<!--.navbar-custom-->
+		<nav class="navbar-custom navbar-expand-lg" id="nav">
+			<!--.navbar-collapse-->
+			<div class="navbar-collapse collapse" id="menu">
+				<!--overlay with close option-->
+				<div class="navbar-collapse__overlay js-navbar-hide" data-target="#menu"></div>
+				<!--scroll-container-->
+				<div class="navbar-collapse__scroll-container">
+					<!--mobile close-->
+					<div class="clearfix d-lg-none">
+						<button class="navbar-toggler js-navbar-hide" type="button" data-target="#menu"><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span>
+						</button>
+					</div>
+					<div class="container navbar-collapse__scroll-container--inner">
+						<div class="row align-items-center navbar-collapse__row">
+							<!-- this logo is visible in desktop-->
+							<div class="col-lg-2 col-6 d-none d-lg-block">
+								<!--.logo-->
+								<a href="dashboard-home.html">
+									<img class="logo" src="img/tpl/logo.png" alt="Hire Humanly">
+								</a>
+							</div>
+							<div class="col-lg-8 navbar-collapse__col">
+								<!--menu-->
+								<!-- add class 'active' to 'nav-item' for active properties-->
+								<ul class="navbar-nav justify-content-center">
+									<li class="nav-item active"><a class="nav-link" href="dashboard-home.html"><span class="nav-link__text">Home</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="jobs-board.html"><span class="nav-link__text">Jobs</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="candidates-board.html"><span class="nav-link__text">Candidates</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="#0"><span class="nav-link__text">Interviews</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-2 navbar-collapse__col">
+								<!--.right-menu - notifications and user menu-->
+								<div class="right-menu d-lg-flex align-items-lg-center justify-content-lg-end">
+									<!--.notifications-dropdown-->
+									<div class="right-menu__item dropdown notifications-dropdown">
+										<a class="notifications-dropdown__toggle nav-item" href="#0" data-toggle="dropdown">
+											<!--visible in mobile-->
+											<div class="d-lg-none nav-link"><span class="nav-link__text">Notifications</span><i class="dropdown-icon fa fa-angle-right"></i>
+											</div>
+											<!-- hide bell in mobile--><i class="notifications-dropdown__icon fa fa-bell-o d-none d-lg-inline"></i>
+											<!-- indicator of unread notifications--><i class="fa fa-circle notifications-dropdown__unread-indicator d-none d-lg-inline"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right notifications-dropdown__menu">
+											<li class="d-lg-none">
+												<!--dropdown close-->
+												<div class="navbar-collapse__button btn btn-link btn-md js-dropdown-collapse"><i class="fa fa-angle-left"></i>
+												</div>
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, reprehenderit!</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+										</ul>
+									</div>
+									<!--/.notifications-dropdown-->
+									<!--.user-menu-->
+									<div class="right-menu__item dropdown user-menu">
+										<a class="dropdown-toggle user-menu__dropdown-toggle nav-item" href="#0" data-toggle="dropdown">
+											<!--visible in mobile-->
+											<div class="d-lg-none nav-link"><span class="nav-link__text">User Menu</span><i class="dropdown-icon fa fa-angle-right"></i>
+											</div>
+											<!-- user photo-->
+											<img class="user-menu__photo rounded-circle d-none d-lg-inline-block" src="img/media/user.jpg" alt="">
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right user-menu__dropdown-menu">
+											<li class="d-lg-none">
+												<!--dropdown close-->
+												<div class="navbar-collapse__button btn btn-link btn-md js-dropdown-collapse"><i class="fa fa-angle-left"></i>
+												</div>
+											</li>
+											<li class="nav-item nav-item-title"><span class="nav-link"><b>Chuck Waygood</b></span>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="account-settings-page.html">Settings</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="teams-page.html">Teams</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="#0">Concierge Rules</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="#0">Sign Out</a>
+											</li>
+										</ul>
+									</div>
+									<!--/.user-menu-->
+								</div>
+								<!--/.right-menu-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.navbar-collapse-->
+		</nav>
+		<!--/.navbar-custom-->
+	</header>
+	<!--/.header - _header.pug-->
+	<!--.page-content-->
+	<div class="page-content">
+		<!--.main-->
+		<main class="main">
+			<div class="container">
+				<div class="subsection">
+					<div class="text-right">
+						<a class="btn btn-success btn-system btn-lg btn-mobile-full-width" href="#0" data-toggle="modal" data-target="#modal-add-member">
+							<img class="icon-left" src="img/tpl/man-add.png" alt="" width="24">Add new team member</a>
+					</div>
+					<!--.modal-->
+					<div class="modal fade" id="modal-add-member">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<!--.modal-header-->
+								<div class="modal-header">
+									<h2 class="modal-title"><span class="fw600">Add Member</span></h2>
+									<button class="close" type="button" data-dismiss="modal"><i class="fa fa-close"></i>
+									</button>
+								</div>
+								<form>
+									<!--.modal-body-->
+									<div class="modal-body">
+										<p>
+											<label>First Name</label>
+											<input class="form-control" type="text" placeholder="" />
+										</p>
+										<p>
+											<label>Last Name</label>
+											<input class="form-control" type="text" placeholder="" />
+										</p>
+										<p>
+											<label>Email Address</label>
+											<input class="form-control" type="text" placeholder="" />
+										</p>
+										<p>
+											<label>User Level</label>
+											<select class="custom-select">
+												<option>-----</option>
+												<option>User</option>
+												<option>Admin</option>
+											</select>
+										</p>
+									</div>
+									<!--.modal-footer-->
+									<div class="modal-footer">
+										<button class="btn btn-system btn-success btn-mobile-full-width" type="submit">ADD MEMBER</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!--/.modal-->
+				</div>
+			</div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-xl-8 col-lg-9">
+						<!-- _team-member.pug-->
+						<div class="box box--border box--rounded subsection">
+							<div class="row">
+								<div class="col-md-8">
+									<h2>Dwight Shrute</h2>
+									<h5><span class="fw500">Senior Recruiter</span></h5>
+									<p class="text-muted">Level: User</p>
+								</div>
+								<div class="col-md-4 align-self-end">
+									<div class="text-right"><a class="btn btn-outline-primary btn-mobile-full-width" href="#0" data-toggle="modal" data-target="#modal-edit-member">Edit Member</a>
+									</div>
+									<!--.modal-->
+									<div class="modal fade" id="modal-edit-member">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<!--.modal-header-->
+												<div class="modal-header">
+													<h2 class="modal-title"><span class="fw600">Edit Member</span></h2>
+													<button class="close" type="button" data-dismiss="modal"><i class="fa fa-close"></i>
+													</button>
+												</div>
+												<form>
+													<!--.modal-body-->
+													<div class="modal-body">
+														<p>
+															<label>First Name</label>
+															<input class="form-control" type="text" placeholder="" />
+														</p>
+														<p>
+															<label>Last Name</label>
+															<input class="form-control" type="text" placeholder="" />
+														</p>
+														<p>
+															<label>Email Address</label>
+															<input class="form-control" type="text" placeholder="" />
+														</p>
+														<p>
+															<label>User Level</label>
+															<select class="custom-select">
+																<option>-----</option>
+																<option>User</option>
+																<option>Admin</option>
+															</select>
+														</p>
+													</div>
+													<!--.modal-footer-->
+													<div class="modal-footer"><a class="btn btn-system btn-danger btn-mobile-full-width" href="#0">DELETE MEMBER</a>
+														<button class="btn btn-system btn-success btn-mobile-full-width" type="submit">SAVE CHANGES</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--/.modal-->
+								</div>
+							</div>
+						</div>
+						<!--/ _team-member.pug-->
+						<!-- _team-member.pug-->
+						<div class="box box--border box--rounded subsection">
+							<div class="row">
+								<div class="col-md-8">
+									<h2>Dwight Shrute</h2>
+									<h5><span class="fw500">Senior Recruiter</span></h5>
+									<p class="text-muted">Level: User</p>
+								</div>
+								<div class="col-md-4 align-self-end">
+									<div class="text-right"><a class="btn btn-outline-primary btn-mobile-full-width" href="#0" data-toggle="modal" data-target="#modal-edit-member-2">Edit Member</a>
+									</div>
+									<!--.modal-->
+									<div class="modal fade" id="modal-edit-member-2">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<!--.modal-header-->
+												<div class="modal-header">
+													<h2 class="modal-title"><span class="fw600">Edit Member</span></h2>
+													<button class="close" type="button" data-dismiss="modal"><i class="fa fa-close"></i>
+													</button>
+												</div>
+												<form>
+													<!--.modal-body-->
+													<div class="modal-body">
+														<p>
+															<label>First Name</label>
+															<input class="form-control" type="text" placeholder="" />
+														</p>
+														<p>
+															<label>Last Name</label>
+															<input class="form-control" type="text" placeholder="" />
+														</p>
+														<p>
+															<label>Email Address</label>
+															<input class="form-control" type="text" placeholder="" />
+														</p>
+														<p>
+															<label>User Level</label>
+															<select class="custom-select">
+																<option>-----</option>
+																<option>User</option>
+																<option>Admin</option>
+															</select>
+														</p>
+													</div>
+													<!--.modal-footer-->
+													<div class="modal-footer"><a class="btn btn-system btn-danger btn-mobile-full-width" href="#0">DELETE MEMBER</a>
+														<button class="btn btn-system btn-success btn-mobile-full-width" type="submit">SAVE CHANGES</button>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+									<!--/.modal-->
+								</div>
+							</div>
+						</div>
+						<!--/ _team-member.pug-->
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--/.main-->
+	</div>
+	<!--/.page-content-->
+	<!--To top-->
+	<div class="to-top__container">
+		<div class="container">
+			<a class="to-top box--shadow-hover js-to-top" href="#">
+				<img src="img/tpl/to-top.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<!-- Scripts-->
+	<!-- jQuery-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Framework-->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Custom-->
+	<script src="js/main.js"></script>
+</body>
+
+</html>

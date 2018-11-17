@@ -1,0 +1,35 @@
+extends templates/template-dashboard.pug
+
+block content
+
+	.container
+
+		.inner-padding
+
+			.row
+
+				mixin box(img, number, title, link)
+
+					.col-md-4.subsection
+
+						//.box
+						.box.box--rounded.box--shadow.h-100.text-center
+							
+							.box__icon
+								img(src="img/tpl/" + img + ".png", alt="")
+							
+							.box__title
+								h2.display-4= number
+								h4= title
+							p
+								a.btn.btn-success.btn-system.btn-mobile-full-width(href= link + ".html") View
+								
+						///.box
+				
+				+box("chear", "50", "Positions", "jobs-board")
+				+box("man-target", "67", "Candidates", "candidates-board")
+				+box("interview", "25", "Interviews", "#0")
+
+
+	
+

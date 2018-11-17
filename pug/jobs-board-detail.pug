@@ -1,0 +1,30 @@
+extends templates/template-dashboard.pug
+
+block content
+	
+	include components/_add-new-team-member.pug
+
+	.container
+		
+		//letter
+		.letter-set
+			.letter-set__container
+				img.letter-set__icon(src="img/tpl/man-ok.png", alt="" width="56")
+				h4.letter-set__text Screened Candidates
+
+		include components/_filters.pug
+
+
+		//.box-list
+		.box-list
+
+			.box-list__scroll
+
+				include components/_candidate-board.pug
+
+				include components/_candidate-board.pug
+
+		///.box-list
+
+
+

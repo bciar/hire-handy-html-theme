@@ -1,0 +1,474 @@
+
+
+html
+	height: 100%
+	font-size: $font-size-base-custom + px
+	
+body
+	background-color: $body-bg
+	word-break: break-word
+	+smooth
+
+.body--full-height
+	display: flex
+	flex-wrap: wrap
+	min-height: 100%
+
+	> *
+		flex: 0 0 100%
+
+
+// font weights
++fw(200)
++fw(300)
++fw(400)
++fw(500)
++fw(600)
++fw(700)
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+b,
+strong
+	font-weight: 700
+
+h1,
+.h1
+	+rem(36)
+
+h2,
+.h2
+	+rem(24)
+
+h3,
+.h3
+	+rem(22)
+
+h4,
+.h4
+	+rem(18)
+
+h5,
+.h5
+	+rem(16)
+
+h6,
+.h6
+	+rem(14)
+
+
+.display-1,
+.display-2,
+.display-3,
+.display-4
+	font-weight: 700
+
+.display-1
+	+rem(60)
+
+.display-2
+	+rem(50)
+
+.display-3
+	+rem(40)
+
+.display-4
+	+rem(32)
+
+p,
+ol,
+ul,
+dl,
+blockquote,
+address
+	margin-bottom: 1em
+
+.text-sm
+	+rem(12)
+
+
+
+
+.dropdown-menu
+	padding-top: 0
+	padding-bottom: 0
+	box-shadow: 0 4px 9px 0 rgba(#000, 0.1)
+
+	.nav-item
+		color: $secondary
+		+nl
+			border-bottom: $border 1px solid
+		
+		a.nav-link
+			color: inherit
+
+			+hf
+				color: #000
+
+
+	.nav-item-title
+		color: inherit
+
+
+.dropdown-item
+
+	&:active
+		background-color: transparent
+
+
+.modal
+	label
+		margin-bottom: 0
+
+.modal-dialog
+	margin: 30px 15px 60px
+	// max-width: 744px
+
+	+min576
+		margin-right: auto
+		margin-left: auto
+		
+	+min768
+		max-width: 600px
+
+.modal-header
+	position: relative
+	display: block
+	padding-right: 50px
+	padding-left: 50px
+	border-bottom: none
+
+	.close
+		position: absolute
+		top: 15px
+		right: 15px
+		width: 50px
+		cursor: pointer
+
+.modal-header--chat
+	position: relative
+	z-index: 3
+	padding-top: 0
+	padding-bottom: 0
+
+	.close
+		padding-top: 10px
+		padding-bottom: 10px
+
+.modal-title
+	text-align: center
+
+.modal-content
+	border: none
+	border-radius: 1px
+	// border-radius: 0
+	box-shadow: 0 2px 4px 0 rgba(#000, 0.5)
+
+.modal-footer
+	display: block
+	border-top: none
+	text-align: center
+
+	> .btn
+		margin-right: 10px
+		margin-left: 10px
+
++cbg("placeholder", $placeholder)
++cbg("green", $green)
++cbg("primary", $primary)
++cbg("blue-light", $blue-light)
++cbg("yellow", $yellow)
++cbg("violet", $violet)
++cbg("pink", $pink)
++cbg("danger", $danger)
++cbg("warning", $warning)
+
+
+// grid
+
+.container
+
+	+max1199
+		// max-width: 90%
+
+
+	// +min1200
+		// max-width: $container
+
+
+.col-1-5
+	flex: 0 0 20%
+	max-width: 20%
+
+
+
+// links
+
+.link-inherit
+	color: inherit
+
+	+hf
+		color: inherit
+		text-decoration: none
+
+
+
+// lists
+
+.list-icons
+
+.list-icons__item
+	display: flex
+	margin-bottom: 30px
+
+	+max991
+		margin-bottom: 15px
+
+.list-icons__icon
+	margin-top: -2px
+	width: 37px
+	min-width: 37px
+
+	+max767
+		width: 30px
+		min-width: 30px
+		margin-top: 0
+
+	img
+		width: 18px
+		
+		+max767
+			width: 16px
+
+
+.progress__items
+	margin-bottom: 15px
+
+.progress__item
+	margin-bottom: 30px
+
+	+max767
+		margin-bottom: 23px
+
+.progress__container
+	position: relative
+	padding-right: 40px
+	margin-bottom: 24px
+
+	+max991
+		margin-bottom: 15px
+
+	+max767
+		margin-bottom: 10px
+	
+	.progress
+		margin-bottom: 0
+
+.progress
+	height: 10px
+	margin-bottom: 15px
+	background-color: #d1d4d8
+	border-radius: 10px
+
+	+max767
+		height: 7px
+
+.progress--md
+	height: 14px
+
+	+max767
+		height: 9px
+
+.progress-bar
+	color: inherit
+
+.progress__text
+	position: absolute
+	top: 50%
+	margin-top: -10px
+	right: 0
+	width: 40px
+	height: 22px
+	text-align: center
+	+rem(14)
+
+.progress-lg__container
+	padding-top: 15px
+	padding-bottom: 50px
+	margin-bottom: 20px
+
+	+max767
+		margin-bottom: 10px
+		// margin-right: 15px
+		// margin-left: 15px
+		padding-bottom: 1px
+
+.progress-lg
+	position: relative
+	height: 24px
+	overflow: visible
+	border-radius: 30px
+	+rem(16)
+
+	+max767
+		height: 16px
+		+rem(13)
+
+	.progress-bar
+		position: relative
+		min-width: 27px
+		border-radius: inherit
+
+		+max767
+			min-width: 11px
+			max-width: 96.5%
+
+.progress__number
+	position: absolute
+	top: 50%
+	margin-right: -13px
+	margin-top: -27px
+	right: 0px
+	z-index: 1
+	width: 54px
+	height: 54px
+	line-height: 44px
+	border-radius: 50%
+	border: transparent 5px solid
+	background-color: #fff
+	+rem(20)
+	text-align: center
+	color: inherit
+
+	+max767
+		width: 40px
+		height: 40px
+		margin-top: -20px
+		margin-right: -20px
+		line-height: 34px
+		border-width: 3px
+		+rem(15)
+
+
+=progress-number-variant($class, $color)
+
+	.progress-bar.bg-#{$class}
+
+		.progress__number
+			border-color: $color
+
++progress-number-variant("green", $green)
++progress-number-variant("primary", $primary)
++progress-number-variant("blue-light", $blue-light)
++progress-number-variant("yellow", $yellow)
++progress-number-variant("violet", $violet)
++progress-number-variant("pink", $pink)
++progress-number-variant("danger", $danger)
++progress-number-variant("warning", $warning)
+
+.progress__min,
+.progress__max
+	position: absolute
+	top: 0
+	width: 40px
+	height: 100%
+	line-height: 24px
+	text-align: center
+	
+	+max767
+		line-height: 16px
+
+.progress__min
+	left: -7px
+	z-index: 0
+	color: #fff
+
+.progress__max
+	right: -7px
+	z-index: 0
+	color: #949699
+
+.progress__min-max-text
+	position: absolute
+	top: 100%
+	margin-top: 15px
+	left: 50%
+	width: 200px
+	margin-left: -100px
+	font-weight: 400
+	color: #949699
+	text-align: center
+
+	+max767
+		display: none
+
+
+
+
+
+
++max767
+
+	h1,
+	.h1
+		+rem(28)
+
+	h2,
+	.h2
+		+rem(20)
+
+	h3,
+	.h3
+		+rem(17)
+
+	h4,
+	.h4
+		+rem(16)
+
+	h5,
+	.h5
+		+rem(14)
+
+	h6,
+	.h6
+		+rem(12)
+
+
+	.display-1
+		+rem(50)
+
+	.display-2
+		+rem(40)
+
+	.display-3
+		+rem(30)
+
+	.display-4
+		+rem(20)
+
+
+	p,
+	ol,
+	ul,
+	dl,
+	blockquote,
+	address
+		margin-bottom: 0.7em
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

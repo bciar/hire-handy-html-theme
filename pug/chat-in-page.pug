@@ -1,0 +1,39 @@
+include _mixins.pug
+
+
+doctype
+html
+
+	include components/_head.pug
+
+	body
+	
+		include components/_header.pug
+
+
+		//.page-content
+		.page-content
+
+			//.main
+			main.main
+				
+				.container
+
+					.row
+
+						.col-md-5.mx-auto
+
+							.box.box--shadow.box--radius-2
+
+								.chat__container--fixed-height
+
+									include components/_chat.pug
+
+			///.main
+
+		///.page-content
+
+
+		include components/_scripts.pug
+
+

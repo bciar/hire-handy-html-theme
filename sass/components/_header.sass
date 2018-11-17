@@ -1,0 +1,528 @@
+
+.header
+	position: relative
+	z-index: 3
+	// padding-top: 15px
+	// padding-bottom: 1px
+	background-color: #FFF
+	
+	+max991
+		padding-top: 13px
+		padding-bottom: 10px
+
+	
+	+max767
+		padding-top: 10px
+		padding-bottom: 7px
+		
+
+	.dropdown-toggle::after
+		display: none
+
+	a
+		color: inherit
+		+hf
+			outline: none
+			color: inherit
+
+.header-mobile
+
+.navbar-toggler
+	float: right
+	cursor: pointer
+	// color: $gray-3
+	+nw
+	+fc
+		outline: 0
+
+	+max767
+		// padding-left: 0
+
+.navbar-toggler__line
+	display: block
+	height: 1px
+	width: 22px
+	+my(5px)
+	background-color: $primary
+
+
+.logo
+	width: 101px
+
+	+tm
+
+	// +min992
+	// 	margin-top: 19px
+
+	// +max991
+	// 	width: 60px
+
+	// +max767
+	// 	width: 40px
+
+.navbar-custom
+
+	// +min992
+	// 	margin-bottom: 15px
+
+
+.navbar-collapse
+	display: block
+
+	
+	+min992
+		// margin-top: 19px
+
+	+max991
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 2
+		width: 0
+		height: 0
+
+		&.show
+			width: 100%
+			height: 100%
+
+			// .navbar-collapse__scroll-container
+			// 	+tf(none)
+
+			// .navbar-collapse__overlay
+			// 	opacity: 1
+
+		&.animations
+			.navbar-collapse__scroll-container
+				+tf(translateX(0))
+
+			.navbar-collapse__overlay
+				opacity: 1
+
+
+
+.navbar-collapse__container
+
+	+max991
+		position: static
+
+.navbar-collapse__button
+	+rem(30)
+	color: inherit
+	margin-bottom: 0
+	margin-left: -15px
+
+	-webkit-appearance: none !important
+	-moz-appearance: none !important
+	appearance: none !important
+
+	+hf
+		color: inherit
+		box-shadow: none
+
+.navbar-collapse__overlay
+
+	+max991
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		width: 100%
+		height: 100%
+		background-color: rgba($black, 0.9)
+		+tm
+
+
+.navbar-collapse__close
+	position: relative
+	z-index: 3
+	margin-bottom: 0
+	min-width: 55px
+	// min-height: 55px
+	// color: $primary
+	+hf
+		// color: $primary
+		box-shadow: none
+
+	+max991
+		// margin-left: -15px
+
+	+max767
+		// +remPhone(20)
+
+.navbar-collapse__scroll-container
+
+	+min992
+		display: flex
+		width: 100%
+
+	+max991
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 2
+		height: 100%
+		width: 50%
+		min-width: 243px
+		max-width: 500px
+		padding-top: 10px
+		background-color: #fff
+
+		overflow: hidden
+		// overflow-y: scroll
+
+		+tf(translateX(-100%))
+		+tm
+
+.navbar-collapse__scroll-container--inner
+
+	+max991
+		position: absolute
+		top: 43px
+		left: 0
+		bottom: 0
+		padding-bottom: 30px
+		width: 100%
+		overflow: hidden
+		overflow-y: scroll
+
+.navbar-nav,
+.navbar-collapse__row
+
+	+max991
+		display: block
+
+
+.navbar-collapse__row
+
+
+.navbar-nav
+
+	a
+		/*all links*/
+		// color: inherit
+		// +hf
+		// 	color: $primary
+
+		> .ft:not(.dropdown-icon)
+			font-size: 1.4em
+		
+		> .ft
+			/*icon inside link*/
+			vertical-align: middle
+			line-height: 0
+			+l
+				margin-left: 13px
+			+f
+				margin-right: 13px
+
+		+max767
+			// +remPhone(18)
+			
+	> .nav-item
+
+		+max991
+			+nl
+				border-bottom: $border 1px solid
+
+	.nav-item
+			
+		&.active
+
+			> .nav-link
+				color: $primary-dark
+
+				> .nav-link__text
+
+					+b
+						width: 100%
+
+
+			+min992
+
+				> .nav-link
+					
+					> .nav-link__text
+						position: relative
+
+						+b
+							width: 100%
+			
+
+	.nav-link
+		padding-top: 0
+		padding-bottom: 0
+		+nw
+					
+		> .nav-link__text
+			position: relative
+			display: block
+			padding-top: 17px
+			padding-bottom: 17px
+
+			+b
+				+ct
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 0
+				height: 2px
+				background-color: $primary-dark
+				+tm
+		
+		+min992
+			
+			+hf
+				color: $primary-dark
+
+				> .nav-link__text
+					+b
+						width: 100%
+
+		+min992
+			border-radius: 4px
+
+		+max991
+			display: flex
+			justify-content: space-between
+			// padding: 22px 15px 22px 0
+
+	.dropdown
+		position: static
+
+
+.navbar-nav,
+.right-menu__item
+	
+	.dropdown-menu
+
+		+max991
+			display: block !important
+			position: fixed !important
+			top: 0 !important
+			left: 100% !important
+			bottom: 0 !important
+			// width: 100%
+			
+			width: 0
+			min-width: 0
+			overflow: hidden
+			padding-left: 0
+
+			min-height: 100%
+			padding-top: 0
+			padding-bottom: 30px
+			margin-top: 0
+			margin-left: 0
+			background-color: #fff
+			border-radius: 0
+			border: none
+			+tf(none !important)
+			+tm
+
+			// overflow: hidden
+			// overflow-y: scroll
+
+			.nav-link
+				padding-right: 0 !important
+			
+
+			&.show
+				left: 0 !important
+				width: 100%
+				height: auto
+				// min-width: 1
+				overflow: scroll
+				// overflow-y: auto
+				padding-left: 15px
+
+				.nav-link
+					// padding-right: 15px 
+
+			
+			.nav-item
+				color: inherit
+
+.navbar-nav .nav-link,
+.navbar-expand-lg .navbar-nav .nav-link
+	
+	+min992
+		padding-right: 20px
+		padding-left: 20px
+
+.navbar-expand-lg > .container,
+.navbar-expand-lg > .container-fluid
+
+	+max991
+		padding-right: 15px
+		padding-left: 15px
+
+// 	+max991
+// 		align-self: center
+
+
+.dropdown-icon
+
+	+min992
+		margin-left: 10px
+
+	+max991
+		align-self: center
+		+rem(24)
+		line-height: 0
+
+
+.navbar-collapse__col
+
+	+max991
+		position: static
+
+
+
+
+
+
+.right-menu
+	
+	+min992
+		text-align: right
+
+	+max991
+
+		.nav-item
+				
+			&.active
+
+				> .nav-link
+					> .nav-link__text
+						+b
+							width: 100%
+
+
+				+min992
+					> .nav-link
+						
+						> .nav-link__text
+							position: relative
+
+							+b
+								width: 100%
+			+hf
+				color: inherit
+				text-decoration: none
+				
+
+		.nav-link
+			padding-top: 8px
+			padding-bottom: 8px
+			// +nw
+						
+			> .nav-link__text
+				position: relative
+
+				+b
+					+ct
+					position: absolute
+					top: 100%
+					left: 0
+					width: 0
+					height: 2px
+					background-color: $primary
+					+tm
+		
+			+hf
+				text-decoration: none
+				color: inherit
+		
+				+min992
+					
+					> .nav-link__text
+						+b
+							width: 100%
+
+.right-menu__item
+
+	+min992
+		+ .right-menu__item
+			margin-left: 3px
+
+	+max991
+		position: static
+		border-top: $border 1px solid
+
+		.nav-item
+			display: block
+			padding: 0
+
+			> .nav-link
+				display: flex
+				justify-content: space-between
+				padding: 17px 15px 17px 0
+.user-menu
+
+.user-menu__dropdown-toggle
+	display: inline-block
+
+.user-menu__photo
+	width: 35px
+	height: 35px
+	background-color: $placeholder
+
+.user-menu__name
+	font-weight: 600
+
+.user-menu__dropdown-menu
+	margin-top: 6px
+
+
+.header-chat
+	// margin-top: 30px
+	margin-bottom: 45px
+
+	+max767
+		margin-bottom: 30px
+
+.chat__form
+	position: relative
+
+.chat__textarea
+	padding-left: 15px
+	padding-right: 50px
+	height: 42px
+	resize: none /*remove corner lines*/
+
+.chat__textarea--expanded
+	height: 100px
+
+.chat__btn
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 1
+	height: 100%
+	padding: 4px 15px
+	margin-bottom: 0
+	color: $secondary
+
+	+hf
+		box-shadow: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

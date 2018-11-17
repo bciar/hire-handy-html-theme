@@ -1,0 +1,561 @@
+
+mixin css(path)
+	link(rel='stylesheet', href=path)
+
+
+mixin login-top
+
+	p.text-center
+
+		img.box--login__logo(src="img/tpl/logo.png", width="140", alt="Hire Humanly")
+
+
+mixin login-form-bottom
+		
+	p.text-right
+		a.text-muted(href="login-reset-password.html") Forgot Password? Click Here
+
+	br
+
+	p.text-center
+		
+		button.btn.btn-success.btn-system.btn-mobile-full-width(type="submit") Log in
+
+
+mixin chatForm(text)
+	
+	//.chat__form
+	form.chat__form
+
+		textarea.form-control.form-control-sm.chat__textarea(placeholder= text)
+			
+		button.chat__btn.btn.btn-link(type="submit")
+			i.fa.fa-paper-plane-o
+
+	///.chat__form
+
+
+
+mixin modal-header(text)
+
+	//.modal-header
+	.modal-header
+
+		h2.modal-title
+			span.fw600= text
+
+		button.close(type="button" data-dismiss="modal")
+			i.fa.fa-close
+
+
+
+mixin modal-body
+
+	//.modal-body
+	.modal-body
+
+		p
+			label First Name
+			input.form-control(type="text" placeholder="")
+
+		p
+			label Last Name
+			input.form-control(type="text" placeholder="")
+
+		p
+			label Email Address
+			input.form-control(type="text" placeholder="")
+
+
+		p
+
+			label User Level
+			select.custom-select
+				option -----
+				option User
+				option Admin
+
+
+
+mixin icon-text-group(icon, text)
+
+	.dropdown-item
+		
+		.icon-text-group
+			img.icon-text-group__icon.icon-left(src="img/tpl/" + icon, alt="")
+			.icon-text-group__text= text
+
+
+mixin progress__container(number, color, max, size)
+							
+	if max
+		//- if maximum is defined
+		-var max = max
+	else
+		//- default bar maximum mark is 10
+		-var max = 10
+
+
+
+	-var percent = (number/max)*100
+
+	.progress__container
+		
+		//- if size class is defined
+		if size
+			.progress(class="progress--" + size)
+				.progress-bar(class="bg-" + color, style="width: " + percent + "%")
+		else
+			.progress
+				.progress-bar(class="bg-" + color, style="width: " + percent + "%")
+
+		b.progress__text= number
+
+
+mixin progress__item(text, number, color, text2, headingIsBold, max, size)
+
+	.progress__item
+
+		if headingIsBold
+			h5= text
+		else
+			h5.fw500= text
+
+		if text2
+			p= text2
+
+		+progress__container(number, color, max, size)
+
+
+mixin progress-lg(number, color, minText, maxText)
+
+	-var percent = (number/5)*100
+	
+	.progress-lg__container
+		
+		.progress.progress-lg
+			
+			// bar
+			.progress-bar(class="bg-" + color, style="width: " + percent + "%")
+
+				// min
+				b.progress__min 0
+					span.progress__min-max-text
+						img.mb-1(src="img/tpl/triangle-up.png", alt="", width="6")
+						br
+						= minText
+				// number
+				b.progress__number= number
+			
+			// max
+			b.progress__max 5
+				span.progress__min-max-text
+					img.mb-1(src="img/tpl/triangle-up.png", alt="", width="6")
+					br
+					= maxText
+
+
+
+mixin toggler(id, icon)
+	
+	// toggler
+	a.tag.tag--xs.tag--icon-changing(href="#0" data-toggle="collapse" data-target= id)
+		i.tag__icon.fa(class= icon)
+		i.tag__icon.tag__icon--right.icon--dropdown.fa.fa-chevron-down
+
+
+
+
+
+
+
+
+
+
+
+mixin candidateBoard(text, icon1)
+
+	//.candidate-board
+	.candidate-board
+
+		.row.no-gutters.box-group
+
+			.col-xl-4.col-lg-4.col-md-6.box-group__item
+				
+				//.box
+				.box.box--border.h-100
+					
+					h2.display-4 Dwight Shrute
+					p.text-muted.mb-0
+						| Applied for: Director, Inside Sales
+						br
+						| Applied on: 5/1/2018
+					
+				///.box
+
+			.col-xl-4.col-lg-4.col-md-6.box-group__item
+				
+				//.box
+				.box.box--border.h-100
+					
+					h5.fw400 Recent work experience
+					
+					h4.fw400.mb-0 ADOBE SYSTEMS
+					
+					p.text-muted.mb-0
+						| Senior Inside Sales Representative
+						br
+						| Experience: 7 Years
+					
+				///.box
+
+			.col-xl-4.col-lg-4.col-md-12.box-group__item
+				
+				.row.no-gutters.h-100
+					
+					.col-6.box-group__item
+
+						//.box
+						.box.box--border.h-100
+							
+							.text-center
+								
+								h5.fw400 Years of Experience
+
+
+								.years-experience
+									h2.years-experience__value 10
+
+						///.box
+
+
+					.col-6.box-group__item
+
+						//.box
+						.box.box--border.h-100
+							
+							.text-center
+								
+								h5.fw400= text
+
+								img.box__icon-2(src="img/tpl/" + icon1, alt="")
+
+						///.box
+	
+	///.candidate-board
+								
+
+
+
+
+
+
+
+
+mixin candidateBoardBottom(differentIcon)
+
+
+	//.candidate-board
+	.candidate-board.candidate-board--bottom
+
+		.row.no-gutters.box-group
+
+			.col-xl-4.col-lg-4.col-md-12.box-group__item
+				
+				//.box
+				.box.box--border.h-100
+
+					.row.h-100.align-items-center
+
+						.col
+							
+							.text-center
+								h4.fw400.text-muted QUICK VIEW:
+					
+				///.box
+
+			.col-xl-8.col-lg-8.col-md-12.box-group__item
+
+				.row.no-gutters.h-100
+
+
+					.col-md-2.col-4
+				
+						//.box
+						.box.box--border.h-100(data-toggle="tooltip" data-placement="bottom" title="Collaboration")
+						
+							+profile-statistic-card(
+								"collaboration.svg",
+								"4"
+							)
+
+						///.box
+
+
+
+					.col-md-2.col-4
+				
+						//.box
+						.box.box--border.h-100(data-toggle="tooltip" data-placement="bottom" Title="Empathy")
+
+							+profile-statistic-card(
+								"empathy.svg",
+								"4"
+							)
+
+						///.box
+
+
+
+					.col-md-2.col-4
+				
+						//.box
+						.box.box--border.h-100(data-toggle="tooltip" data-placement="bottom" Title="Drive")
+
+							+profile-statistic-card(
+								"drive.svg",
+								"4.5"
+							)
+
+						///.box
+						
+
+
+					.col-md-2.col-4
+				
+						//.box
+						.box.box--border.h-100(data-toggle="tooltip" data-placement="bottom" Title="Focus")
+
+							+profile-statistic-card(
+								"focus.svg",
+								"4"
+							)
+
+						///.box
+						
+
+
+					.col-md-2.col-4
+				
+						//.box
+						.box.box--border.h-100(data-toggle="tooltip" data-placement="bottom" title="Judgment")
+
+
+							+profile-statistic-card(
+								"judgment.svg",
+								"3"
+							)
+					
+						///.box
+						
+
+
+					.col-md-2.col-4
+				
+						//.box
+						.box.box--border.h-100(data-toggle="tooltip" data-placement="bottom" title="Leadership")
+
+
+							+profile-statistic-card(
+								differentIcon,
+								""
+							)
+					
+						///.box
+
+
+	///.candidate-board
+
+
+
+
+
+
+
+
+
+mixin candidateBoardIcons(differentIcon)
+
+
+	//.candidate-board
+	.candidate-board.candidate-board--bottom
+
+		.box-group__item
+
+			.row.no-gutters.h-100
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#collaboration" data-toggle="tooltip" data-placement="bottom" title="Collaboration")
+					
+						+profile-statistic-card(
+							"collaboration.svg",
+							"4"
+						)
+
+					///.box
+
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#empathy"  data-toggle="tooltip" data-placement="bottom" title="Empathy")
+
+						+profile-statistic-card(
+							"empathy.svg",
+							"4"
+						)
+
+					///.box
+
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#drive"  data-toggle="tooltip" data-placement="bottom" title="Drive")
+
+						+profile-statistic-card(
+							"drive.svg",
+							"4.5"
+						)
+
+					///.box
+					
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#focus"  data-toggle="tooltip" data-placement="bottom" title="Focus")
+
+						+profile-statistic-card(
+							"focus.svg",
+							"4"
+						)
+
+					///.box
+					
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#judgment"  data-toggle="tooltip" data-placement="bottom" title="Judgment")
+
+
+						+profile-statistic-card(
+							"judgment.svg",
+							"3"
+						)
+				
+					///.box
+					
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#leadership"  data-toggle="tooltip" data-placement="bottom" title="Leadership")
+
+
+						+profile-statistic-card(
+							differentIcon,
+							""
+						)
+				
+					///.box
+					
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#passions"  data-toggle="tooltip" data-placement="bottom" title="Passions")
+
+
+						+profile-statistic-card(
+							"passions.svg",
+							""
+						)
+				
+					///.box
+					
+
+
+				.col-lg-1-8.col-md-3.col-3
+			
+					//.box
+					a.box.box--border.h-100.js-profile-link(href="#core-values"  data-toggle="tooltip" data-placement="bottom" title="Core Values")
+
+
+						+profile-statistic-card(
+							"core-values.svg",
+							""
+						)
+				
+					///.box
+
+
+	///.candidate-board
+
+
+
+
+
+
+
+
+
+
+
+
+mixin profile-statistic(color, link, icon, number, active)
+
+	//.profile-statistic
+	a.profile-statistic.js-profile-link(class="profile-statistic--" + color + " " + active, href= link, data-target="#motivators")
+
+		span.profile-statistic__icon-container
+			img.profile-statistic__icon.profile-statistic__icon--normal(src="img/tpl/profile/motivators/" + icon + "-blue.png", alt="")
+			img.profile-statistic__icon.profile-statistic__icon--active(src="img/tpl/profile/motivators/" + icon + ".png", alt="")
+		
+		span.profile-statistic__rating.text-muted= number
+
+	///.profile-statistic
+
+
+
+
+mixin profile-statistic-card(icon, number)
+
+	//.profile-statistic
+	.profile-statistic
+
+		span.profile-statistic__icon-container
+			img.profile-statistic__icon(src="img/tpl/" + icon, alt="")
+		
+		span.profile-statistic__rating= number
+
+	///.profile-statistic
+
+
+
+
+
+mixin profile-statistic-2(color, link, icon, active)
+
+	//.profile-statistic
+	a.profile-statistic.js-profile-link(class="profile-statistic--" + color + " " + active, href= link, data-target="#personal")
+
+		span.profile-statistic__icon-container
+			img.profile-statistic__icon.profile-statistic__icon--normal(src="img/tpl/profile/personal/" + icon + "-blue.png", alt="")
+			img.profile-statistic__icon.profile-statistic__icon--active(src="img/tpl/profile/personal/" + icon + ".png", alt="")
+		
+	///.profile-statistic
+
+
+
+				

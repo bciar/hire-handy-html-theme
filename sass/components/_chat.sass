@@ -1,0 +1,219 @@
+
+.chat-body
+	height: 100%
+
+.chat__container
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	position: relative
+	height: 100%
+
+.chat__container--fixed-height
+	height: 600px
+
+.chat__header
+	position: relative
+	z-index: 2
+	height: 48px
+	padding-top: 10px
+	border-bottom: $primary 2px solid
+	text-align: center
+
+.chat__specialist-name
+	margin-bottom: 0
+	font-weight: 600
+
+.chat__specialist-position
+	+rem(10)
+	font-weight: 600
+
+.chat__body
+	// display: none
+	position: absolute
+	top: 48px
+	left: 0
+	z-index: 1
+	width: 100%
+	bottom: 55px
+	padding-top: 23px
+	padding-bottom: 0px
+	overflow: auto
+
+.chat__message-container
+	margin-bottom: 15px
+
+.chat__specialist-photo
+	width: 32px
+	height: 32px
+	margin-right: 10px
+
+.chat__message
+	max-width: 176px
+	padding: 4px 8px
+	border-radius: 4px
+
+.chat__message--specialist
+	background-color: $primary
+	color: #fff
+
+.chat__message--user
+	background-color: #fff
+	border: $border 1px solid
+
+/*TYPING CIRCLES ANIMATION*/
+
++keys(circleOne)
+	0%
+		+tf(translateY(0px))
+
+	25%
+		+tf(translateY(4px))
+
+	75%
+		+tf(translateY(-4px))
+
+	100%
+		+tf(translateY(0px))
+
+
++keys(circleTwo)
+	0%
+		+tf(translateY(-4px))
+
+	25%
+		+tf(translateY(0px))
+
+	50%
+		+tf(translateY(4px))
+
+	100%
+		+tf(translateY(-4px))
+
+
+
++keys(circleThree)
+	0%
+		+tf(translateY(4px))
+
+	25%
+		+tf(translateY(-4px))
+
+	75%
+		+tf(translateY(0px))
+
+	100%
+		+tf(translateY(4px))
+
+
+.chat__bubles
+	+md
+	margin-right: 0.2em
+	margin-top: -0.15em
+	margin-left: -0.3em
+	+rem(42)
+	line-height: 0
+
+.chat__buble
+	// width: 20px
+	letter-spacing: -0.5em
+	line-height: 0
+	+md
+	
+	&
+		+anim(circleOne 800ms linear infinite)
+
+	&:nth-child(2)
+		+anim(circleTwo 800ms linear infinite)
+
+	&:nth-child(3)
+		+anim(circleThree 800ms linear infinite)
+
+
+
+
+.chat__icon--big
+	+md
+	margin-right: 0.15em
+	margin-left: -0.3em
+	letter-spacing: -0.5em
+	+rem(80)
+	line-height: 0
+
+.chat__user-img-in-message
+	display: inline-block
+	vertical-align: middle
+	width: 20px
+	height: 20px
+	border-radius: 50%
+
+.chat__footer
+	position: relative
+	z-index: 2
+	padding-top: 8px
+	padding-bottom: 15px
+
+.chat__fixed-container
+	position: fixed
+	right: 0
+	bottom: 0px
+	z-index: 3
+	height: 700px
+	max-height: 100%
+	width: 400px
+	max-width: 100%
+	padding: 15px 30px 85px 15px
+
+	+max767
+		padding-right: 15px
+
+.chat__toggler
+	position: absolute
+	bottom: 15px
+	right: 15px
+	z-index: 2
+	margin-bottom: 0
+	width: 50px
+	height: 50px
+	line-height: 50px
+	padding: 0
+	border-radius: 50%
+	+rem(20)
+	
+	&.show
+
+		.chat__toggler-icon--open
+			display: none
+
+		.chat__toggler-icon--close
+			display: inline-block
+		
+
+.chat__toggler-icon--open
+
+.chat__toggler-icon--close
+	display: none
+
+.chat-collapse
+	height: 100%
+	+tf(translateY(400px))
+	+tm
+	opacity: 0
+
+	&.show
+		+tf(none)
+		opacity: 1
+
+
+.chat-collapsible
+	height: 100%
+	background-color: #fff
+
+
+
+
+
+
+
+
+

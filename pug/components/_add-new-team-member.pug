@@ -1,0 +1,31 @@
+.container
+
+	.subsection
+
+		.text-right
+
+			a.btn.btn-success.btn-system.btn-lg.btn-mobile-full-width(href="#0"  data-toggle="modal" data-target="#modal-add-member")
+				img.icon-left(src="img/tpl/man-add.png", alt="" width="24")
+				| Add new team member
+
+		//.modal
+		.modal.fade#modal-add-member
+
+			.modal-dialog
+
+				.modal-content
+
+					+modal-header("Add Member")
+
+					form
+
+						+modal-body
+
+
+						//.modal-footer
+						.modal-footer
+
+							button.btn.btn-system.btn-success.btn-mobile-full-width(type="submit") ADD MEMBER
+
+
+		///.modal

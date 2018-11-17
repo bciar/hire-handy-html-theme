@@ -1,0 +1,140 @@
+
+
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+.form-control,
+.custom-select
+	padding: 8px 18px
+	border-radius: 50px
+	background-color: #f7f9fd
+	font-weight: 500
+	+tm
+	+rem(16)
+	+pht($gray-2)
+
+	+fc
+		border-color: darken($border, 5%)
+		background-color: #f7f9fd
+
+	+pht(#949699)
+
+
+
+select.form-control
+	background: #fff
+	+an
+
+.custom-select
+	display: block
+	height: auto
+	width: 100%
+	+an
+
+input[type="color"].form-control-sm,
+input[type="date"].form-control-sm,
+input[type="datetime-local"].form-control-sm,
+input[type="email"].form-control-sm,
+input[type="month"].form-control-sm,
+input[type="number"].form-control-sm,
+input[type="password"].form-control-sm,
+input[type="search"].form-control-sm,
+input[type="tel"].form-control-sm,
+input[type="text"].form-control-sm,
+input[type="time"].form-control-sm,
+input[type="url"].form-control-sm,
+input[type="week"].form-control-sm,
+.form-control-sm
+	// height: auto
+	// padding: 0.25rem 0.5rem
+	// font-size: 0.875rem
+	// line-height: 1.5
+	// border-radius: 0
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.custom-select.is-invalid
+	color: $danger
+	
+	+hf
+		border-color: $danger
+		color: $danger
+	
+	+pht($danger)
+
+.form-alerts-container
+	// display: none
+	position: absolute
+	margin-bottom: 6px
+	bottom: 100%
+	left: 0
+	z-index: 1
+	width: 100%
+
+
+.form-alert
+	display: none
+	padding: 5px 10px
+	margin-bottom: 8px
+	border-radius: $border-radius
+	background-color: $danger
+	box-shadow: 0 3px 8px 0 rgba(#000, 0.5)
+	color: #fff
+
+	// &.is-visible
+		// display: inline-block
+
+.label-set
+	label
+		// margin-right: 15px
+		+rem(27)
+	
+	.input-group-addon
+		border: none
+		padding-left: 0
+		background-color: transparent
+
+	.form-control:not(:first-child), .input-group-addon:not(:first-child), .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .btn-group > .btn, .input-group-btn:not(:first-child) > .dropdown-toggle, .input-group-btn:not(:last-child) > .btn:not(:first-child), .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn
+		border-radius: 50px
+
+.checkbox-set
+	display: flex
+	align-items: center
+
+.checkbox-set__checkbox
+	+in
+	margin-right: 15px
+	margin-top: 0.15em
+
+.checkbox-set__text
+	+in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

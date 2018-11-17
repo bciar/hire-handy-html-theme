@@ -1,0 +1,146 @@
+extends templates/template-dashboard.pug
+
+block content
+
+	.container
+
+		.row.justify-content-center
+
+			.col-xl-8.col-lg-9
+
+				//.box
+				.box.box--border.box--rounded.subsection
+
+					.row.align-items-end
+
+						.col-md-8
+
+							.d-md-flex.align-items-center
+
+								.settings__user-photo-container
+
+									//photo
+									img.settings__user-photo.rounded-circle(src="img/tpl/user-placeholder.png", alt="")
+										
+
+								div
+
+									h2 Chuck Waygood
+
+									h5
+										span.fw500 chuck.waygood@hortonworks.com
+
+									p.text-muted Level: User
+
+						.col-md-4
+
+							.text-right
+
+								a.btn.btn-outline-primary.btn-mobile-full-width(href="#0" data-toggle="modal" data-target="#modal-change-password") Change Password
+
+
+							//.modal
+							.modal.fade#modal-change-password
+
+								.modal-dialog
+
+									.modal-content
+
+										+modal-header("Change Password")
+
+										form
+
+											//.modal-body
+											.modal-body
+
+												p
+													label Old Password
+													input.form-control(type="password" placeholder="")
+
+												p
+													label New Password
+													input.form-control(type="password" placeholder="")
+
+												p
+													label Confirm New Password
+													input.form-control(type="password" placeholder="")
+
+
+											//.modal-footer
+											.modal-footer
+
+												button.btn.btn-outline-success.btn-mobile-full-width(type="submit") Change Password
+
+
+							///.modal
+
+				///.box
+
+				
+				.subsection
+
+					.row.no-gutters.account__box-group
+
+						.col-md-6.box-group__item
+
+							//.box
+							.box.box--border.box--rounded.h-100
+
+								h5.mb-4 Communication Preferences
+
+								form
+
+									p.label-set.input-group
+										label.input-group-addon
+											img(src="img/tpl/phone.png", alt="" width="23")
+										input.form-control.form-control-sm(type="tel" placeholder="###-###-####")
+
+									p.label-set.input-group
+										label.input-group-addon
+											img(src="img/tpl/skype.png", alt="" width="23")
+										input.form-control.form-control-sm(type="text" placeholder="Skype Username")
+
+							///.box
+
+						.col-md-6.box-group__item
+
+							//.box
+							.box.box--border.box--rounded.h-100
+
+								h5.mb-4 Notification Settings
+
+								form.notification-settings-form
+
+									p
+										span.checkbox-set
+											
+											label.on-off-switch.js-switch
+												input(type="checkbox")
+
+											span.checkbox-set__text Notifying me when Interview is scheduled
+
+									p
+										span.checkbox-set
+											
+											label.on-off-switch.js-switch
+												input(type="checkbox")
+											span.checkbox-set__text Notifying me new Candidate is screened
+
+							///.box
+
+
+
+
+
+
+
+
+
+		
+		
+		
+
+
+
+
+

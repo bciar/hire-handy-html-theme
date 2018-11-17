@@ -1,0 +1,136 @@
+
+
+//.chat__container - components/_chat.pug
+.chat__container
+
+	//.chat__header
+	.chat__header
+
+		.container-fluid
+
+			h6.chat__specialist-name Chuck Waygood
+			h6.chat__specialist-position VP, Talent Aquistion
+
+	
+	//.chat__body
+	.chat__body
+
+		.container-fluid
+			
+			// specialist message
+			.chat__message-container.d-flex
+
+				img.chat__specialist-photo.bg-placeholder.rounded-circle(src="img/media/user.jpg", alt="")
+
+				.chat__message.chat__message--specialist
+					| This is a chatbot bubble
+			/// specialist message
+			
+
+			// user message
+			.chat__message-container.d-flex.justify-content-end
+
+				.chat__message.chat__message--user
+					| This is a user message
+			/// user message
+
+			
+			// specialist message
+			.chat__message-container.d-flex
+
+				img.chat__specialist-photo.bg-placeholder.rounded-circle(src="img/media/user.jpg", alt="")
+
+				.chat__message.chat__message--specialist
+					|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim labore ad, laudantium minus vero veniam.
+			/// specialist message
+			
+
+			// user message
+			.chat__message-container.d-flex.justify-content-end
+
+				.chat__message.chat__message--user
+					|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit harum laboriosam, porro iusto, fugiat est.
+			/// user message
+			
+
+			// specialist message
+			.chat__message-container.d-flex
+
+				img.chat__specialist-photo.bg-placeholder.rounded-circle(src="img/media/user.jpg", alt="")
+
+				.chat__message.chat__message--specialist
+					span.chat__bubles
+						span.chat__buble •
+						span.chat__buble •
+						span.chat__buble •
+
+			/// specialist message
+
+			
+			// specialist message
+			.chat__message-container.d-flex
+
+				img.chat__specialist-photo.bg-placeholder.rounded-circle(src="img/media/user.jpg", alt="")
+
+				.chat__message.chat__message--specialist
+					| Joe Smith, Title
+					span.chat__icon--big •
+			/// specialist message
+
+			
+			// specialist message
+			.chat__message-container.d-flex
+
+				img.chat__specialist-photo.bg-placeholder.rounded-circle(src="img/media/user.jpg", alt="")
+
+				.chat__message.chat__message--specialist
+					| Joe Smith, Job Title  
+					img.chat__user-img-in-message(src="img/media/user.jpg", width="22" alt="") 
+			/// specialist message
+			
+
+			// user message
+			.chat__message-container.d-flex.justify-content-end
+
+				.chat__message.chat__message--user
+					|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit harum laboriosam, porro iusto, fugiat est.
+			/// user message
+
+			
+			// specialist message
+			.chat__message-container.d-flex
+
+				img.chat__specialist-photo.bg-placeholder.rounded-circle(src="img/media/user.jpg", alt="")
+
+				.chat__message.chat__message--specialist
+					| Joe Smith
+					img.chat__user-img-in-message(src="img/media/user.jpg", alt="") 
+					| &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam veritatis iste at consequuntur ad architecto tenetur, quae quasi atque obcaecati et nam animi officia, amet fuga, aut cum suscipit voluptatibus.
+			/// specialist message
+			
+
+			// user message
+			.chat__message-container.d-flex.justify-content-end
+
+				.chat__message.chat__message--user
+					| Joe Smith
+					img.chat__user-img-in-message(src="img/media/user.jpg", alt="") 
+					| &nbsp; Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam veritatis iste at consequuntur ad architecto tenetur, quae quasi atque obcaecati et nam animi officia, amet fuga, aut cum suscipit voluptatibus.
+			/// user message
+			
+		
+
+	///.chat__body
+
+
+
+	//.chat__footer
+	.chat__footer
+
+		.container-fluid
+			
+			+chatForm("Enter Your Message")
+	///.chat__footer
+
+
+//.chat__container - components/_chat.pug

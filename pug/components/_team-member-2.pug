@@ -1,0 +1,45 @@
+// _team-member.pug
+
+.box.box--border.box--rounded.subsection
+
+	.row
+
+		.col-md-8
+			h2 Dwight Shrute
+			h5: span.fw500 Senior Recruiter
+			p.text-muted Level: User
+
+
+		.col-md-4.align-self-end
+
+			.text-right
+				a.btn.btn-outline-primary.btn-mobile-full-width(href="#0" data-toggle="modal" data-target="#modal-edit-member-2") Edit Member
+
+
+			//.modal
+			.modal.fade#modal-edit-member-2
+
+				.modal-dialog
+
+					.modal-content
+
+						+modal-header("Edit Member")
+
+						form
+
+							+modal-body
+
+
+							//.modal-footer
+							.modal-footer
+
+								a.btn.btn-system.btn-danger.btn-mobile-full-width(href="#0") DELETE MEMBER
+								button.btn.btn-system.btn-success.btn-mobile-full-width(type="submit") SAVE CHANGES
+
+			///.modal
+
+
+
+
+
+/// _team-member.pug

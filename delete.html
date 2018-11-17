@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		HireHumanly Chat Examples
+	</title>
+</head>
+<body>
+<!-- <div id="embedded_messenger">
+  <header id="message_header" onclick="Botkit.toggle()">
+    <img src="//portal.hirehumanly.com/chatbot/img/paper-plane.png" width="30">
+  </header>
+  <iframe scrolling="no"  id="botkit_client" src="//portal.hirehumanly.com/chatbot/chat.html"></iframe>
+</div>
+<script src="//portal.hirehumanly.com/chatbot/embed.js"></script>
+<script>
+  var options = {org: '5ac69a9f659f2c5632b6517f'};
+  Botkit.boot(options);
+</script>
+<link rel="stylesheet" href="//portal.hirehumanly.com/chatbot/css/embed.css" /> -->
+
+
+
+	<!-- Local -->
+	<div id="embedded_messenger">
+	  <header id="message_header" onclick="Botkit.toggle()">
+	  	<img src="//localhost:3000/img/paper-plane.png" width="30">
+	  </header>
+	  <iframe scrolling="no"  id="botkit_client" src="//localhost:3000/chat.html"></iframe>
+	</div>
+	<script src="//localhost:3000/embed.js"></script>
+	<script>
+	  var options = {org: '5ac69a9f659f2c5632b6517f'};
+	  Botkit.boot(options);
+	</script>
+	<link rel="stylesheet" href="//localhost:3000/css/embed.css" /> 
+</body>
+</html>

@@ -1,0 +1,679 @@
+extends templates/template-dashboard.pug
+
+block content
+	
+	.container
+
+		include components/_candidate-header.pug
+
+
+
+
+
+		//.box
+		.box.box--border.box--pading-lg.pb-0.subsection#collaboration
+			
+			// main content
+			.row.icon-left__row.align-items-center.align-items-md-start
+				
+				.col-lg-8.col-md-9.offset-md-2.col-9
+					h2.box__title-icon Collaboration 
+
+				.col-md-2.col-3.icon-left__col
+					img.box__icon-lg--left(src="img/tpl/collaboration.svg", alt="")
+				
+				.col-lg-8.col-md-9.offset-md-2
+
+					.icon-left__margin
+
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.
+
+						+progress-lg("0", "violet", "Lorem ipsum dolor", "Lorem ipsum dolor")
+			
+			// accordion
+			#accordion-collaboration
+
+				div.accordion
+					
+					// togglers
+					p.collapse-tags.text-right.clearfix.tags--mobile-half-width
+						
+						+toggler("#questions-collaboration", "fa-question")
+						+toggler("#submotivators-collaboration", "fa-bar-chart")
+
+					
+					// questions
+					.box-collapse.collapse(data-parent="#accordion-collaboration")#questions-collaboration
+
+						include components/_box-collapse__content.pug
+
+					/// questions
+
+					
+					// submotivators
+					.box-collapse.collapse(data-parent="#accordion-collaboration")#submotivators-collaboration
+
+						.box-collapse__content
+
+							.row.justify-content-lg-center.justify-content-md-end
+
+								.col-md-8.col-md-10
+
+									.progress__items
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"0.0",
+											"violet",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"2.5",
+											"violet",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"5.0",
+											"violet",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+									
+					/// submotivators
+			
+			/// accordion
+
+		///.box
+
+
+
+
+
+
+
+
+		
+
+
+
+
+		//.box
+		.box.box--border.box--pading-lg.pb-0.subsection#empathy
+			
+			// main content
+			.row.icon-left__row.align-items-center.align-items-md-start
+				
+				.col-lg-8.col-md-9.offset-md-2.col-9
+					h2.box__title-icon Empathy 
+
+				.col-md-2.col-3.icon-left__col
+					img.box__icon-lg--left(src="img/tpl/empathy.svg", alt="")
+				
+				.col-lg-8.col-md-9.offset-md-2
+
+					.icon-left__margin
+
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.
+
+						+progress-lg("1", "pink", "Lorem ipsum dolor", "Lorem ipsum dolor")
+			
+			// accordion
+			#accordion-empathy
+
+				div.accordion
+					
+					// togglers
+					p.collapse-tags.text-right.clearfix.tags--mobile-half-width
+						
+						+toggler("#questions-empathy", "fa-question")
+						+toggler("#submotivators-empathy", "fa-bar-chart")
+
+					
+					// questions
+					.box-collapse.collapse(data-parent="#accordion-empathy")#questions-empathy
+
+						include components/_box-collapse__content.pug
+
+					/// questions
+
+					
+					// submotivators
+					.box-collapse.collapse(data-parent="#accordion-empathy")#submotivators-empathy
+
+						.box-collapse__content
+
+							.row.justify-content-lg-center.justify-content-md-end
+
+								.col-md-8.col-md-10
+
+									.progress__items
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"0.0",
+											"pink",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"2.5",
+											"pink",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"5.0",
+											"pink",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+									
+					/// submotivators
+			
+			/// accordion
+
+		///.box
+
+
+
+
+
+
+
+
+		
+
+
+
+
+		//.box
+		.box.box--border.box--pading-lg.pb-0.subsection#drive
+			
+			// main content
+			.row.icon-left__row.align-items-center.align-items-md-start
+				
+				.col-lg-8.col-md-9.offset-md-2.col-9
+					h2.box__title-icon Drive 
+
+				.col-md-2.col-3.icon-left__col
+					img.box__icon-lg--left(src="img/tpl/drive.svg", alt="")
+				
+				.col-lg-8.col-md-9.offset-md-2
+
+					.icon-left__margin
+
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.
+
+						+progress-lg("3", "yellow", "Lorem ipsum dolor", "Lorem ipsum dolor")
+			
+			// accordion
+			#accordion-drive
+
+				div.accordion
+					
+					// togglers
+					p.collapse-tags.text-right.clearfix.tags--mobile-half-width
+						
+						+toggler("#questions-drive", "fa-question")
+						+toggler("#submotivators-drive", "fa-bar-chart")
+
+					
+					// questions
+					.box-collapse.collapse(data-parent="#accordion-drive")#questions-drive
+
+						include components/_box-collapse__content.pug
+
+					/// questions
+
+					
+					// submotivators
+					.box-collapse.collapse(data-parent="#accordion-drive")#submotivators-drive
+
+						.box-collapse__content
+
+							.row.justify-content-lg-center.justify-content-md-end
+
+								.col-md-8.col-md-10
+
+									.progress__items
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"0.0",
+											"yellow",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"2.5",
+											"yellow",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"5.0",
+											"yellow",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+									
+					/// submotivators
+			
+			/// accordion
+
+		///.box
+
+
+
+
+
+
+
+
+		
+
+
+
+
+		//.box
+		.box.box--border.box--pading-lg.pb-0.subsection#focus
+			
+			// main content
+			.row.icon-left__row.align-items-center.align-items-md-start
+				
+				.col-lg-8.col-md-9.offset-md-2.col-9
+					h2.box__title-icon Focus 
+
+				.col-md-2.col-3.icon-left__col
+					img.box__icon-lg--left(src="img/tpl/focus.svg", alt="")
+				
+				.col-lg-8.col-md-9.offset-md-2
+
+					.icon-left__margin
+
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.
+
+						+progress-lg("4.5", "blue-light", "Lorem ipsum dolor", "Lorem ipsum dolor")
+			
+			// accordion
+			#accordion-focus
+
+				div.accordion
+					
+					// togglers
+					p.collapse-tags.text-right.clearfix.tags--mobile-half-width
+						
+						+toggler("#questions-focus", "fa-question")
+						+toggler("#submotivators-focus", "fa-bar-chart")
+
+					
+					// questions
+					.box-collapse.collapse(data-parent="#accordion-focus")#questions-focus
+
+						include components/_box-collapse__content.pug
+
+					/// questions
+
+					
+					// submotivators
+					.box-collapse.collapse(data-parent="#accordion-focus")#submotivators-focus
+
+						.box-collapse__content
+
+							.row.justify-content-lg-center.justify-content-md-end
+
+								.col-md-8.col-md-10
+
+									.progress__items
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"0.0",
+											"blue-light",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"2.5",
+											"blue-light",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"5.0",
+											"blue-light",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+									
+					/// submotivators
+			
+			/// accordion
+
+		///.box
+
+
+
+
+
+
+
+
+		
+
+
+
+
+		//.box
+		.box.box--border.box--pading-lg.pb-0.subsection#judgment
+			
+			// main content
+			.row.icon-left__row.align-items-center.align-items-md-start
+				
+				.col-lg-8.col-md-9.offset-md-2.col-9
+					h2.box__title-icon Judgment 
+
+				.col-md-2.col-3.icon-left__col
+					img.box__icon-lg--left(src="img/tpl/judgment.svg", alt="")
+				
+				.col-lg-8.col-md-9.offset-md-2
+
+					.icon-left__margin
+
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.
+
+						+progress-lg("5.0", "green", "Lorem ipsum dolor", "Lorem ipsum dolor")
+			
+			// accordion
+			#accordion-inspiration
+
+				div.accordion
+					
+					// togglers
+					p.collapse-tags.text-right.clearfix.tags--mobile-half-width
+						
+						+toggler("#questions-inspiration", "fa-question")
+						+toggler("#submotivators-inspiration", "fa-bar-chart")
+
+					
+					// questions
+					.box-collapse.collapse(data-parent="#accordion-inspiration")#questions-inspiration
+
+						include components/_box-collapse__content.pug
+
+					/// questions
+
+					
+					// submotivators
+					.box-collapse.collapse(data-parent="#accordion-inspiration")#submotivators-inspiration
+
+						.box-collapse__content
+
+							.row.justify-content-lg-center.justify-content-md-end
+
+								.col-md-8.col-md-10
+
+									.progress__items
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"0.0",
+											"green",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"2.5",
+											"green",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+
+										+progress__item(
+											"Lorem Ipsum Dolor",
+											"5.0",
+											"green",
+											"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum",
+											true,
+											5,
+											"md"
+										)
+									
+					/// submotivators
+			
+			/// accordion
+
+		///.box
+
+
+
+
+
+
+
+
+		
+		.row
+
+			.col-md-6.subsection
+
+				//.box
+				.box.box--border.box--pading-lg.h-100#leadership
+					
+
+					//.subsection
+					.subsection
+
+						// main content
+						.row.align-items-center
+							
+							.col-md-4.order-2.order-md-1.col-3
+								img.img-fluid(src="img/tpl/leadership.svg", alt="")
+							
+							.col-md-8.order-1.order-md-2.col-9
+								h2.mb-0 Leadership Style  
+					
+					///.subsection
+					
+
+					//content
+
+					h4 Transformational
+					p Sees the opportunity to motivate and engage others through establishing a shared vision for the future.  Trusts others and understands that people are motivated intrinsically and as a leader, it is their job to support and encourage to accomplish shared goals. 
+
+
+				///.box
+
+
+
+			.col-md-6.subsection
+
+				//.box
+				.box.box--border.box--pading-lg.h-100#passions
+					
+
+					//.subsection
+					.subsection
+
+						// main content
+						.row.align-items-center.text-md-right
+							
+							.col-md-8.col-9
+								h2.mb-0 Personal Passions
+							
+							.col-md-4.col-3
+								img.img-fluid(src="img/tpl/passions.svg", alt="")
+					
+					///.subsection
+
+
+					//content
+
+					ul.list-icons.list-unstyled
+						
+						li.list-icons__item
+							.list-icons__icon
+								img(src="img/tpl/fire.svg", alt="")
+							div Coaching and mentoring young professionals
+						
+						li.list-icons__item
+							.list-icons__icon
+								img(src="img/tpl/fire.svg", alt="")
+							div Creating and leading great teams to overachieve results
+
+
+
+				///.box
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//.box
+		.box.box--border.box--pading-lg.pb-0.subsection#core-values
+			
+			// main content
+			.row.icon-left__row.align-items-center.align-items-md-start
+				
+				.col-lg-10.col-md-10.offset-md-2.col-9
+					h2.box__title-icon Core Values 
+
+				.col-md-2.col-3.icon-left__col
+					img.box__icon-lg--left(src="img/tpl/core-values.svg", alt="")
+				
+				.col-lg-10.col-md-10.offset-md-2
+
+					.icon-left__margin
+
+						p
+
+							span.tag-sm.tag-info Respect
+							span.tag-sm.tag-info Trust
+							span.tag-sm.tag-info Integrity
+							span.tag-sm.tag-info Self-Mastery
+							span.tag-sm.tag-info Responsibility
+							span.tag-sm.tag-info Service
+							span.tag-sm.tag-info Communication
+							span.tag-sm.tag-info Relationships
+							span.tag-sm.tag-info Team
+							span.tag-sm.tag-info Empathy
+			
+
+		///.box
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+
+
+
+
+

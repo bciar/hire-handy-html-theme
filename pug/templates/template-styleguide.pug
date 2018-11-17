@@ -1,0 +1,59 @@
+include ../_mixins.pug
+
+
+doctype
+html(lang="zxx")
+
+	include ../components/_head.pug
+
+	body
+
+
+
+		//.page-content
+		.page-content
+
+
+			//.main
+			main.main
+
+				block content
+
+			///.main
+
+		///.page-content
+
+
+
+
+		//.page-content
+		.page-content
+
+
+			//.header-chat
+			.header-chat
+				.container
+
+					.row.justify-content-end
+
+						.col-lg-4.col-md-5
+
+							+chatForm("You Can Chat Here")
+
+			///.header-chat
+
+
+		.container
+			.py-3
+				h2 Header
+
+		include ../components/_header.pug
+
+		
+
+
+
+
+
+
+		include ../components/_scripts.pug

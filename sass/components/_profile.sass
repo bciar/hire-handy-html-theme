@@ -1,0 +1,129 @@
+
+.box--profile
+
+	+min768
+
+		.profile-statistic__column
+		
+			+f
+				.profile-statistic
+					border-bottom-left-radius: 5px
+
+			+l
+				.profile-statistic
+					border-bottom-right-radius: 5px
+
+.profile-statistic-links
+
+	&.active
+
+.profile-statistic__column
+	border-top: $border 1px solid
+	
+	+nf
+		border-left: $border 1px solid
+
+.profile-statistic
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	// padding: 5px 15px
+	// height: 59px
+	margin-bottom: 4px
+	text-align: center
+	+tm
+
+	+max767
+		height: auto
+		padding: 11px 0px
+
+	+hf
+		text-decoration: none
+
+.profile-statistic__icon-container
+	position: relative
+	display: inline-block
+	
+.profile-statistic__icon
+	max-width: 40px
+	max-height: 40px
+
+.profile-statistic__icon--normal
+
+.profile-statistic__icon--active
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 1
+	opacity: 0
+	+tm
+
+.profile-statistic__rating
+	position: absolute
+	left: 100%
+	margin-left: -15px
+	bottom: 0px
+	z-index: 2
+	+rem(12)
+	+nw
+
+	+max767
+		+rem(11)
+
+.profile-statistic-links.active .profile-statistic,
+.profile-statistic:hover,
+.profile-statistic:focus
+
+	.profile-statistic__icon--active
+		opacity: 1
+
+.profile-statistic.active
+
+=profile-statistic-variant($class, $color)
+	.profile-statistic-links.active .profile-statistic--#{$class}
+
+		+hf
+			background-color: rgba($color, 0.2)
+
+
++profile-statistic-variant("violet", $violet)
++profile-statistic-variant("pink", $pink)
++profile-statistic-variant("yellow", $yellow)
++profile-statistic-variant("blue-light", $blue-light)
++profile-statistic-variant("green", $green)
+
+
+.profile__tab-pane
+	height: 0
+	overflow: hidden
+
+	&.active
+		height: auto
+		overflow: visible
+
+.collapse-tags
+	margin-bottom: 5px
+
+.tags--mobile-half-width
+	
+	+max767
+	
+		.tag
+			float: left
+			width: 46%
+			max-width: 120px
+			margin-right: 0
+			justify-content: center
+
+			&:nth-child(even)
+				float: right
+
+
+
+
+
+
+
+
+

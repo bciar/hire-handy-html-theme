@@ -1,0 +1,56 @@
+include _mixins.pug
+
+
+doctype
+html
+
+	include components/_head.pug
+
+	body
+	
+		include components/_header.pug
+
+
+		//.page-content
+		.page-content
+
+			//.main
+			main.main
+				
+				.container
+					
+					.text-center
+
+						a.btn.btn-outline-primary.btn-mobile-full-width(href="#0" data-toggle="modal" data-target="#modal-chat") Open Chat
+
+					//.modal
+					.modal.fade#modal-chat
+
+						.modal-dialog
+
+							.modal-content
+								
+
+								//.modal-header
+								.modal-header.modal-header--chat
+
+									button.close(type="button" data-dismiss="modal")
+										i.fa.fa-close
+								
+								.chat__container--fixed-height
+								
+									include components/_chat.pug
+
+
+					///.modal
+
+
+
+			///.main
+
+		///.page-content
+
+
+		include components/_scripts.pug
+
+

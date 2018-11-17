@@ -1,0 +1,35 @@
+include ../_mixins.pug
+
+
+doctype
+html(lang="zxx")
+
+	include ../components/_head.pug
+
+	body.body--full-height
+
+
+		//.page-content
+		.page-content.page-content--login.page-content--center
+
+			//.main
+			main.main
+
+				.container.h-100
+
+					.row.align-items-center.h-100
+
+						.col-lg-5.mx-auto.col-md-7.col-sm-8
+							
+							//.box
+							.box.box--login.box--rounded.box--shadow
+
+								block content
+
+							///.box
+
+			///.main
+
+		///.page-content
+
+		include ../components/_scripts.pug

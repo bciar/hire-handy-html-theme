@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!--Head-->
+
+<head>
+	<!--Meta-->
+	<meta charset="utf-8">
+	<!--Title-->
+	<title>Hire Humanly</title>
+	<!--Viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes">
+	<!--Font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700" />
+	<!--Main-->
+	<link rel="stylesheet" href="css/main.css" />
+	<!--Favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<!--.header - _header.pug-->
+	<header class="header">
+		<!--.header-mobile - visible in tablet/mobile-->
+		<div class="header-mobile d-lg-none">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-2 col-6">
+						<!--.logo-->
+						<a href="dashboard-home.html">
+							<img class="logo" src="img/tpl/logo.png" alt="Hire Humanly">
+						</a>
+					</div>
+					<!--menu button-->
+					<div class="col-6">
+						<button class="navbar-toggler js-navbar-show" type="button" data-target="#menu"><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.header-mobile-->
+		<!--.navbar-custom-->
+		<nav class="navbar-custom navbar-expand-lg" id="nav">
+			<!--.navbar-collapse-->
+			<div class="navbar-collapse collapse" id="menu">
+				<!--overlay with close option-->
+				<div class="navbar-collapse__overlay js-navbar-hide" data-target="#menu"></div>
+				<!--scroll-container-->
+				<div class="navbar-collapse__scroll-container">
+					<!--mobile close-->
+					<div class="clearfix d-lg-none">
+						<button class="navbar-toggler js-navbar-hide" type="button" data-target="#menu"><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span>
+						</button>
+					</div>
+					<div class="container navbar-collapse__scroll-container--inner">
+						<div class="row align-items-center navbar-collapse__row">
+							<!-- this logo is visible in desktop-->
+							<div class="col-lg-2 col-6 d-none d-lg-block">
+								<!--.logo-->
+								<a href="dashboard-home.html">
+									<img class="logo" src="img/tpl/logo.png" alt="Hire Humanly">
+								</a>
+							</div>
+							<div class="col-lg-8 navbar-collapse__col">
+								<!--menu-->
+								<!-- add class 'active' to 'nav-item' for active properties-->
+								<ul class="navbar-nav justify-content-center">
+									<li class="nav-item active"><a class="nav-link" href="dashboard-home.html"><span class="nav-link__text">Home</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="jobs-board.html"><span class="nav-link__text">Jobs</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="candidates-board.html"><span class="nav-link__text">Candidates</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="#0"><span class="nav-link__text">Interviews</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-2 navbar-collapse__col">
+								<!--.right-menu - notifications and user menu-->
+								<div class="right-menu d-lg-flex align-items-lg-center justify-content-lg-end">
+									<!--.notifications-dropdown-->
+									<div class="right-menu__item dropdown notifications-dropdown">
+										<a class="notifications-dropdown__toggle nav-item" href="#0" data-toggle="dropdown">
+											<!--visible in mobile-->
+											<div class="d-lg-none nav-link"><span class="nav-link__text">Notifications</span><i class="dropdown-icon fa fa-angle-right"></i>
+											</div>
+											<!-- hide bell in mobile--><i class="notifications-dropdown__icon fa fa-bell-o d-none d-lg-inline"></i>
+											<!-- indicator of unread notifications--><i class="fa fa-circle notifications-dropdown__unread-indicator d-none d-lg-inline"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right notifications-dropdown__menu">
+											<li class="d-lg-none">
+												<!--dropdown close-->
+												<div class="navbar-collapse__button btn btn-link btn-md js-dropdown-collapse"><i class="fa fa-angle-left"></i>
+												</div>
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, reprehenderit!</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+										</ul>
+									</div>
+									<!--/.notifications-dropdown-->
+									<!--.user-menu-->
+									<div class="right-menu__item dropdown user-menu">
+										<a class="dropdown-toggle user-menu__dropdown-toggle nav-item" href="#0" data-toggle="dropdown">
+											<!--visible in mobile-->
+											<div class="d-lg-none nav-link"><span class="nav-link__text">User Menu</span><i class="dropdown-icon fa fa-angle-right"></i>
+											</div>
+											<!-- user photo-->
+											<img class="user-menu__photo rounded-circle d-none d-lg-inline-block" src="img/media/user.jpg" alt="">
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right user-menu__dropdown-menu">
+											<li class="d-lg-none">
+												<!--dropdown close-->
+												<div class="navbar-collapse__button btn btn-link btn-md js-dropdown-collapse"><i class="fa fa-angle-left"></i>
+												</div>
+											</li>
+											<li class="nav-item nav-item-title"><span class="nav-link"><b>Chuck Waygood</b></span>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="account-settings-page.html">Settings</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="teams-page.html">Teams</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="#0">Concierge Rules</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="#0">Sign Out</a>
+											</li>
+										</ul>
+									</div>
+									<!--/.user-menu-->
+								</div>
+								<!--/.right-menu-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.navbar-collapse-->
+		</nav>
+		<!--/.navbar-custom-->
+	</header>
+	<!--/.header - _header.pug-->
+	<!--.page-content-->
+	<div class="page-content">
+		<!--.main-->
+		<main class="main">
+			<div class="container">
+				<!--.filters.pug-->
+				<div class="filters-container">
+					<div class="box-list">
+						<!-- simple tag-->
+						<a class="tag" href="#0">
+							<div class="tag__text">A-Z</div><i class="fa tag__icon tag__icon--right fa-exchange"></i>
+						</a>
+						<!-- tag dropdown		-->
+						<div class="tag__dropdown dropdown">
+							<!-- not .active is hidden until click-->
+							<a class="tag tag--by tag--dropdown" href="#0" data-toggle="dropdown">
+								<div class="tag__text">Filter by</div><i class="fa tag__icon tag__icon--right tag__dropdown-icon fa-chevron-down"></i>
+							</a>
+							<!-- .active is visible-->
+							<a class="tag tag--by tag--dropdown active" href="#0" data-toggle="dropdown">
+								<div>
+									<img class="tag__icon tag__icon--left" src="img/tpl/inspiration.png" alt="">
+									<div class="tag__text">Top Inspiration</div>
+								</div><i class="fa tag__icon tag__icon--right fa-close"></i>
+							</a>
+							<!-- menu-->
+							<div class="dropdown-menu">
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/shortlisted.png" alt="" />
+										<div class="icon-text-group__text">Shortlisted Candidates</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/networking.png" alt="" />
+										<div class="icon-text-group__text">Top Collaboration</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/emphathy.png" alt="" />
+										<div class="icon-text-group__text">Top Empathy</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/drive.png" alt="" />
+										<div class="icon-text-group__text">Top Drive</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/focus.png" alt="" />
+										<div class="icon-text-group__text">Top Focus</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/inspiration.png" alt="" />
+										<div class="icon-text-group__text">Top Inspiration</div>
+									</div>
+								</div>
+								<div class="dropdown-item">
+									<div class="icon-text-group">
+										<img class="icon-text-group__icon icon-left" src="img/tpl/leadership.png" alt="" />
+										<div class="icon-text-group__text">Leadership Style</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/.filters.pug-->
+			</div>
+			<div class="container">
+				<!--letter-->
+				<div class="letter-set">
+					<div class="letter-set__container"><span class="letter-set__letter">A</span>
+					</div>
+				</div>
+				<!--.box-list-->
+				<div class="box-list">
+					<div class="box-list__scroll">
+						<!--.candidate-board__container-->
+						<a class="candidate-board__container subsection box--shadow-hover link-inherit" href="profile.html">
+							<!--.candidate-board-->
+							<div class="candidate-board">
+								<div class="row no-gutters box-group">
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h2 class="display-4">Dwight Shrute</h2>
+											<p class="text-muted mb-0">Applied for: Director, Inside Sales
+												<br/>Applied on: 5/1/2018</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h5 class="fw400">Recent work experience</h5>
+											<h4 class="fw400 mb-0">ADOBE SYSTEMS</h4>
+											<p class="text-muted mb-0">Senior Inside Sales Representative
+												<br/>Experience: 7 Years</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-12 box-group__item">
+										<div class="row no-gutters h-100">
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Years of Experience</h5>
+														<div class="years-experience">
+															<h2 class="years-experience__value">10</h2>
+														</div>
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Add to Shortlist</h5>
+														<img class="box__icon-2" src="img/tpl/hands-shake.svg" alt="" />
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/.candidate-board-->
+						</a>
+						<!--/.candidate-board__container-->
+						<!--.candidate-board__container-->
+						<a class="candidate-board__container subsection box--shadow-hover link-inherit" href="profile.html">
+							<!--.candidate-board-->
+							<div class="candidate-board">
+								<div class="row no-gutters box-group">
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h2 class="display-4">Dwight Shrute</h2>
+											<p class="text-muted mb-0">Applied for: Director, Inside Sales
+												<br/>Applied on: 5/1/2018</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h5 class="fw400">Recent work experience</h5>
+											<h4 class="fw400 mb-0">ADOBE SYSTEMS</h4>
+											<p class="text-muted mb-0">Senior Inside Sales Representative
+												<br/>Experience: 7 Years</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-12 box-group__item">
+										<div class="row no-gutters h-100">
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Years of Experience</h5>
+														<div class="years-experience">
+															<h2 class="years-experience__value">10</h2>
+														</div>
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Add to Shortlist</h5>
+														<img class="box__icon-2" src="img/tpl/hands-shake.svg" alt="" />
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/.candidate-board-->
+						</a>
+						<!--/.candidate-board__container-->
+					</div>
+				</div>
+				<!--/.box-list-->
+				<!--letter-->
+				<div class="letter-set">
+					<div class="letter-set__container"><span class="letter-set__letter">B</span>
+					</div>
+				</div>
+				<!--.box-list-->
+				<div class="box-list">
+					<div class="box-list__scroll">
+						<!--.candidate-board__container-->
+						<a class="candidate-board__container subsection box--shadow-hover link-inherit" href="profile.html">
+							<!--.candidate-board-->
+							<div class="candidate-board">
+								<div class="row no-gutters box-group">
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h2 class="display-4">Dwight Shrute</h2>
+											<p class="text-muted mb-0">Applied for: Director, Inside Sales
+												<br/>Applied on: 5/1/2018</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h5 class="fw400">Recent work experience</h5>
+											<h4 class="fw400 mb-0">ADOBE SYSTEMS</h4>
+											<p class="text-muted mb-0">Senior Inside Sales Representative
+												<br/>Experience: 7 Years</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-12 box-group__item">
+										<div class="row no-gutters h-100">
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Years of Experience</h5>
+														<div class="years-experience">
+															<h2 class="years-experience__value">10</h2>
+														</div>
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Add to Shortlist</h5>
+														<img class="box__icon-2" src="img/tpl/hands-shake.svg" alt="" />
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/.candidate-board-->
+						</a>
+						<!--/.candidate-board__container-->
+						<!--.candidate-board__container-->
+						<a class="candidate-board__container subsection box--shadow-hover link-inherit" href="profile.html">
+							<!--.candidate-board-->
+							<div class="candidate-board">
+								<div class="row no-gutters box-group">
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h2 class="display-4">Dwight Shrute</h2>
+											<p class="text-muted mb-0">Applied for: Director, Inside Sales
+												<br/>Applied on: 5/1/2018</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-6 box-group__item">
+										<!--.box-->
+										<div class="box box--border h-100">
+											<h5 class="fw400">Recent work experience</h5>
+											<h4 class="fw400 mb-0">ADOBE SYSTEMS</h4>
+											<p class="text-muted mb-0">Senior Inside Sales Representative
+												<br/>Experience: 7 Years</p>
+										</div>
+										<!--/.box-->
+									</div>
+									<div class="col-xl-4 col-lg-4 col-md-12 box-group__item">
+										<div class="row no-gutters h-100">
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Years of Experience</h5>
+														<div class="years-experience">
+															<h2 class="years-experience__value">10</h2>
+														</div>
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+											<div class="col-6 box-group__item">
+												<!--.box-->
+												<div class="box box--border h-100">
+													<div class="text-center">
+														<h5 class="fw400">Add to Shortlist</h5>
+														<img class="box__icon-2" src="img/tpl/hands-shake.svg" alt="" />
+													</div>
+												</div>
+												<!--/.box-->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/.candidate-board-->
+						</a>
+						<!--/.candidate-board__container-->
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--/.main-->
+	</div>
+	<!--/.page-content-->
+	<!--To top-->
+	<div class="to-top__container">
+		<div class="container">
+			<a class="to-top box--shadow-hover js-to-top" href="#">
+				<img src="img/tpl/to-top.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<!-- Scripts-->
+	<!-- jQuery-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Framework-->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Custom-->
+	<script src="js/main.js"></script>
+</body>
+
+</html>

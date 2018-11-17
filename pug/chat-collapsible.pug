@@ -1,0 +1,79 @@
+include _mixins.pug
+
+
+doctype
+html
+
+	include components/_head.pug
+
+	body
+	
+		// demo content
+		.container
+
+			br
+
+			h2 Demo Content
+			hr
+
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+			p Lorem ipsum dolor sit amet.
+
+
+		// fixed chat
+		.chat__fixed-container
+
+			// toggler
+			a.chat__toggler.btn.btn-primary(href="#0" data-toggle="chat" data-target="#chat-collapsible")
+				i.chat__toggler-icon--open.fa.fa-paper-plane-o
+				i.chat__toggler-icon--close.fa.fa-close
+			
+			// chat-collapsible
+			.chat-collapse#chat-collapsible
+
+				.chat-collapsible.box--shadow.box--rounded
+
+					
+					include components/_chat.pug
+
+
+
+
+		include components/_scripts.pug
+
+

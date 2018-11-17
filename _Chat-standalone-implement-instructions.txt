@@ -1,0 +1,1 @@
+Look demo page "chat-collapsible.html". it is implemented there. To implement chat at any page insert HTML for chat. Include "main.css" and "main.js".

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!--Head-->
+
+<head>
+	<!--Meta-->
+	<meta charset="utf-8">
+	<!--Title-->
+	<title>Hire Humanly</title>
+	<!--Viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes">
+	<!--Font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700" />
+	<!--Main-->
+	<link rel="stylesheet" href="css/main.css" />
+	<!--Favicon-->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<!--.header - _header.pug-->
+	<header class="header">
+		<!--.header-mobile - visible in tablet/mobile-->
+		<div class="header-mobile d-lg-none">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-2 col-6">
+						<!--.logo-->
+						<a href="dashboard-home.html">
+							<img class="logo" src="img/tpl/logo.png" alt="Hire Humanly">
+						</a>
+					</div>
+					<!--menu button-->
+					<div class="col-6">
+						<button class="navbar-toggler js-navbar-show" type="button" data-target="#menu"><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/.header-mobile-->
+		<!--.navbar-custom-->
+		<nav class="navbar-custom navbar-expand-lg" id="nav">
+			<!--.navbar-collapse-->
+			<div class="navbar-collapse collapse" id="menu">
+				<!--overlay with close option-->
+				<div class="navbar-collapse__overlay js-navbar-hide" data-target="#menu"></div>
+				<!--scroll-container-->
+				<div class="navbar-collapse__scroll-container">
+					<!--mobile close-->
+					<div class="clearfix d-lg-none">
+						<button class="navbar-toggler js-navbar-hide" type="button" data-target="#menu"><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span><span class="navbar-toggler__line"></span>
+						</button>
+					</div>
+					<div class="container navbar-collapse__scroll-container--inner">
+						<div class="row align-items-center navbar-collapse__row">
+							<!-- this logo is visible in desktop-->
+							<div class="col-lg-2 col-6 d-none d-lg-block">
+								<!--.logo-->
+								<a href="dashboard-home.html">
+									<img class="logo" src="img/tpl/logo.png" alt="Hire Humanly">
+								</a>
+							</div>
+							<div class="col-lg-8 navbar-collapse__col">
+								<!--menu-->
+								<!-- add class 'active' to 'nav-item' for active properties-->
+								<ul class="navbar-nav justify-content-center">
+									<li class="nav-item active"><a class="nav-link" href="dashboard-home.html"><span class="nav-link__text">Home</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="jobs-board.html"><span class="nav-link__text">Jobs</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="candidates-board.html"><span class="nav-link__text">Candidates</span></a>
+									</li>
+									<li class="nav-item"><a class="nav-link" href="#0"><span class="nav-link__text">Interviews</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-2 navbar-collapse__col">
+								<!--.right-menu - notifications and user menu-->
+								<div class="right-menu d-lg-flex align-items-lg-center justify-content-lg-end">
+									<!--.notifications-dropdown-->
+									<div class="right-menu__item dropdown notifications-dropdown">
+										<a class="notifications-dropdown__toggle nav-item" href="#0" data-toggle="dropdown">
+											<!--visible in mobile-->
+											<div class="d-lg-none nav-link"><span class="nav-link__text">Notifications</span><i class="dropdown-icon fa fa-angle-right"></i>
+											</div>
+											<!-- hide bell in mobile--><i class="notifications-dropdown__icon fa fa-bell-o d-none d-lg-inline"></i>
+											<!-- indicator of unread notifications--><i class="fa fa-circle notifications-dropdown__unread-indicator d-none d-lg-inline"></i>
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right notifications-dropdown__menu">
+											<li class="d-lg-none">
+												<!--dropdown close-->
+												<div class="navbar-collapse__button btn btn-link btn-md js-dropdown-collapse"><i class="fa fa-angle-left"></i>
+												</div>
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, reprehenderit!</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+											<li class="nav-item">
+												<!--.notification-->
+												<a class="nav-link notification container-fluid d-flex justify-content-between" href="#0">
+													<p class="notification__text">Notification.</p><i class="notification__close fa fa-close"></i>
+												</a>
+												<!--/.notification-->
+											</li>
+										</ul>
+									</div>
+									<!--/.notifications-dropdown-->
+									<!--.user-menu-->
+									<div class="right-menu__item dropdown user-menu">
+										<a class="dropdown-toggle user-menu__dropdown-toggle nav-item" href="#0" data-toggle="dropdown">
+											<!--visible in mobile-->
+											<div class="d-lg-none nav-link"><span class="nav-link__text">User Menu</span><i class="dropdown-icon fa fa-angle-right"></i>
+											</div>
+											<!-- user photo-->
+											<img class="user-menu__photo rounded-circle d-none d-lg-inline-block" src="img/media/user.jpg" alt="">
+										</a>
+										<ul class="dropdown-menu dropdown-menu-right user-menu__dropdown-menu">
+											<li class="d-lg-none">
+												<!--dropdown close-->
+												<div class="navbar-collapse__button btn btn-link btn-md js-dropdown-collapse"><i class="fa fa-angle-left"></i>
+												</div>
+											</li>
+											<li class="nav-item nav-item-title"><span class="nav-link"><b>Chuck Waygood</b></span>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="account-settings-page.html">Settings</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="teams-page.html">Teams</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="#0">Concierge Rules</a>
+											</li>
+											<li class="nav-item"><a class="nav-link" href="#0">Sign Out</a>
+											</li>
+										</ul>
+									</div>
+									<!--/.user-menu-->
+								</div>
+								<!--/.right-menu-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/.navbar-collapse-->
+		</nav>
+		<!--/.navbar-custom-->
+	</header>
+	<!--/.header - _header.pug-->
+	<!--.page-content-->
+	<div class="page-content">
+		<!--.main-->
+		<main class="main">
+			<div class="container">
+				<!--.candidate-header-->
+				<div class="candidate-header">
+					<!--.candidate-board__container-->
+					<div class="candidate-board__container subsection">
+						<!--.candidate-board-->
+						<div class="candidate-board">
+							<div class="row no-gutters box-group">
+								<div class="col-lg-4 col-md-6 box-group__item">
+									<!--.box-->
+									<div class="box box--border h-100">
+										<h2 class="display-4">Dwight Shrute</h2>
+										<p class="text-muted mb-0">Applied for: Director, Inside Sales
+											<br>Applied on: 5/1/2018</p>
+										<div class="row align-items-center">
+											<div class="col-md-6">
+												<p class="text-muted mb-0"><i class="fa fa-phone icon-left"></i>813-340-5588</p>
+											</div>
+											<div class="col-md-6">
+												<div class="text-right"><a class="btn btn-link btn-sm mb-0" href="#0" data-toggle="collapse" data-target="#contact-info"><i class="fa fa-angle-down icon-left"></i>More contact info</a>
+												</div>
+											</div>
+										</div>
+										<!--.card__contact-info-->
+										<div class="card__contact-info collapse" id="contact-info">
+											<!--.contacts-list-->
+											<ul class="contacts-list list-unstyled text-muted mt-3">
+												<li><i class="fa icon-left fa-skype"></i>JohnDoe123
+													<hr>
+												</li>
+												<li><i class="fa icon-left fa-comment"></i>TheJohnDoe
+													<hr>
+												</li>
+												<li><i class="fa icon-left fa-envelope"></i>john.doe@gmail.com</li>
+											</ul>
+											<!--/.contacts-list-->
+										</div>
+										<!--/.card__contact-info-->
+									</div>
+									<!--/.box-->
+								</div>
+								<div class="col-lg-2 col-md-6 box-group__item order-3 order-lg-2">
+									<!--.box-->
+									<div class="box box--border h-100">
+										<div class="text-center">
+											<h5 class="fw400">Recruiter Concierge Replay </h5>
+											<a href="#0">
+												<img class="box__icon-2" src="img/tpl/message-gray.svg" alt="">
+											</a>
+										</div>
+									</div>
+									<!--/.box-->
+								</div>
+								<div class="col-lg-4 col-md-6 box-group__item">
+									<!--.box-->
+									<div class="box box--border h-100">
+										<h5 class="fw400">Recent work experience</h5>
+										<h4 class="fw400 mb-0">ADOBE SYSTEMS</h4>
+										<p class="text-muted mb-0">Senior Inside Sales Representative
+											<br>Experience: 7 Years</p>
+										<div class="text-right"><a class="btn btn-link btn-sm mb-0" href="#0"><i class="fa fa-paperclip icon-left"></i>View Resume</a>
+										</div>
+									</div>
+									<!--/.box-->
+								</div>
+								<div class="col-lg-2 col-md-6 order-2 order-lg-4 box-group__item">
+									<!--.box-->
+									<div class="box box--border h-100">
+										<div class="text-center">
+											<h5 class="fw400">Relevant Years of Experience</h5>
+											<div class="years-experience">
+												<h2 class="years-experience__value">10</h2>
+											</div>
+										</div>
+									</div>
+									<!--/.box-->
+								</div>
+							</div>
+						</div>
+						<!--/.candidate-board-->
+					</div>
+					<!--/.candidate-board__container-->
+				</div>
+				<!--/.candidate-header-->
+				<!--.candidate-subheader-->
+				<div class="candidate-subheader">
+					<!--.candidate-board__container-->
+					<div class="candidate-board__container subsection">
+						<!--.box-->
+						<div class="box box--border">
+							<div class="box__container">
+								<div class="text-center">
+									<h5 class="mb-0">HireHumanly Candidate Profile</h5>
+								</div>
+							</div>
+						</div>
+						<!--/.box-->
+						<!--.candidate-board-->
+						<div class="candidate-board candidate-board--bottom">
+							<div class="box-group__item">
+								<div class="row no-gutters h-100">
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#collaboration" data-toggle="tooltip" data-placement="bottom" title="Collaboration">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/collaboration.svg" alt=""/></span><span class="profile-statistic__rating">4</span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#empathy" data-toggle="tooltip" data-placement="bottom" title="Empathy">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/empathy.svg" alt=""/></span><span class="profile-statistic__rating">4</span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#drive" data-toggle="tooltip" data-placement="bottom" title="Drive">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/drive.svg" alt=""/></span><span class="profile-statistic__rating">4.5</span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#focus" data-toggle="tooltip" data-placement="bottom" title="Focus">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/focus.svg" alt=""/></span><span class="profile-statistic__rating">4</span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#judgment" data-toggle="tooltip" data-placement="bottom" title="Judgment">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/judgment.svg" alt=""/></span><span class="profile-statistic__rating">3</span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#leadership" data-toggle="tooltip" data-placement="bottom" title="Leadership">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/leadership.svg" alt=""/></span><span class="profile-statistic__rating"></span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#passions" data-toggle="tooltip" data-placement="bottom" title="Passions">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/passions.svg" alt=""/></span><span class="profile-statistic__rating"></span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+									<div class="col-lg-1-8 col-md-3 col-3">
+										<!--.box-->
+										<a class="box box--border h-100 js-profile-link" href="#core-values" data-toggle="tooltip" data-placement="bottom" title="Core Values">
+											<!--.profile-statistic-->
+											<div class="profile-statistic"><span class="profile-statistic__icon-container"><img class="profile-statistic__icon" src="img/tpl/core-values.svg" alt=""/></span><span class="profile-statistic__rating"></span>
+											</div>
+											<!--/.profile-statistic-->
+										</a>
+										<!--/.box-->
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/.candidate-board-->
+					</div>
+					<!--/.candidate-board__container-->
+				</div>
+				<!--/.candidate-subheader-->
+				<!--.box-->
+				<div class="box box--border box--pading-lg pb-0 subsection" id="collaboration">
+					<!-- main content-->
+					<div class="row icon-left__row align-items-center align-items-md-start">
+						<div class="col-lg-8 col-md-9 offset-md-2 col-9">
+							<h2 class="box__title-icon">Collaboration </h2>
+						</div>
+						<div class="col-md-2 col-3 icon-left__col">
+							<img class="box__icon-lg--left" src="img/tpl/collaboration.svg" alt="">
+						</div>
+						<div class="col-lg-8 col-md-9 offset-md-2">
+							<div class="icon-left__margin">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.</p>
+								<div class="progress-lg__container">
+									<div class="progress progress-lg">
+										<!-- bar-->
+										<div class="progress-bar bg-violet" style="width: 0%">
+											<!-- min--><b class="progress__min">0<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+											<!-- number--><b class="progress__number">0</b>
+										</div>
+										<!-- max--><b class="progress__max">5<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- accordion-->
+					<div id="accordion-collaboration">
+						<div class="accordion">
+							<!-- togglers-->
+							<p class="collapse-tags text-right clearfix tags--mobile-half-width">
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#questions-collaboration"><i class="tag__icon fa fa-question"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#submotivators-collaboration"><i class="tag__icon fa fa-bar-chart"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+							</p>
+							<!-- questions-->
+							<div class="box-collapse collapse" data-parent="#accordion-collaboration" id="questions-collaboration">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="box-question">
+												<h4>Question lorem ipsum</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus ea, error tempore ducimus, repellat veniam amet dicta ipsum, vel eos aut praesentium porro neque, ipsam minus autem tenetur! Eum!?</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas velit porro, ratione debitis aspernatur. Corporis dicta sed, iste exercitationem quibusdam illum id, porro! Voluptatibus asperiores accusamus eaque maiores animi!?</p>
+											</div>
+											<div class="box-question">
+												<h4>How to lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, excepturi.?</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod magnam architecto et, nemo, distinctio quas tenetur facere sapiente reprehenderit, necessitatibus ab. Molestias doloribus, neque natus!?</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ questions-->
+							<!-- submotivators-->
+							<div class="box-collapse collapse" data-parent="#accordion-collaboration" id="submotivators-collaboration">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="progress__items">
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-violet" style="width: 0%"></div>
+														</div><b class="progress__text">0.0</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-violet" style="width: 50%"></div>
+														</div><b class="progress__text">2.5</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-violet" style="width: 100%"></div>
+														</div><b class="progress__text">5.0</b>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ submotivators-->
+						</div>
+					</div>
+					<!--/ accordion-->
+				</div>
+				<!--/.box-->
+				<!--.box-->
+				<div class="box box--border box--pading-lg pb-0 subsection" id="empathy">
+					<!-- main content-->
+					<div class="row icon-left__row align-items-center align-items-md-start">
+						<div class="col-lg-8 col-md-9 offset-md-2 col-9">
+							<h2 class="box__title-icon">Empathy </h2>
+						</div>
+						<div class="col-md-2 col-3 icon-left__col">
+							<img class="box__icon-lg--left" src="img/tpl/empathy.svg" alt="">
+						</div>
+						<div class="col-lg-8 col-md-9 offset-md-2">
+							<div class="icon-left__margin">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.</p>
+								<div class="progress-lg__container">
+									<div class="progress progress-lg">
+										<!-- bar-->
+										<div class="progress-bar bg-pink" style="width: 20%">
+											<!-- min--><b class="progress__min">0<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+											<!-- number--><b class="progress__number">1</b>
+										</div>
+										<!-- max--><b class="progress__max">5<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- accordion-->
+					<div id="accordion-empathy">
+						<div class="accordion">
+							<!-- togglers-->
+							<p class="collapse-tags text-right clearfix tags--mobile-half-width">
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#questions-empathy"><i class="tag__icon fa fa-question"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#submotivators-empathy"><i class="tag__icon fa fa-bar-chart"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+							</p>
+							<!-- questions-->
+							<div class="box-collapse collapse" data-parent="#accordion-empathy" id="questions-empathy">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="box-question">
+												<h4>Question lorem ipsum</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus ea, error tempore ducimus, repellat veniam amet dicta ipsum, vel eos aut praesentium porro neque, ipsam minus autem tenetur! Eum!?</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas velit porro, ratione debitis aspernatur. Corporis dicta sed, iste exercitationem quibusdam illum id, porro! Voluptatibus asperiores accusamus eaque maiores animi!?</p>
+											</div>
+											<div class="box-question">
+												<h4>How to lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, excepturi.?</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod magnam architecto et, nemo, distinctio quas tenetur facere sapiente reprehenderit, necessitatibus ab. Molestias doloribus, neque natus!?</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ questions-->
+							<!-- submotivators-->
+							<div class="box-collapse collapse" data-parent="#accordion-empathy" id="submotivators-empathy">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="progress__items">
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-pink" style="width: 0%"></div>
+														</div><b class="progress__text">0.0</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-pink" style="width: 50%"></div>
+														</div><b class="progress__text">2.5</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-pink" style="width: 100%"></div>
+														</div><b class="progress__text">5.0</b>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ submotivators-->
+						</div>
+					</div>
+					<!--/ accordion-->
+				</div>
+				<!--/.box-->
+				<!--.box-->
+				<div class="box box--border box--pading-lg pb-0 subsection" id="drive">
+					<!-- main content-->
+					<div class="row icon-left__row align-items-center align-items-md-start">
+						<div class="col-lg-8 col-md-9 offset-md-2 col-9">
+							<h2 class="box__title-icon">Drive </h2>
+						</div>
+						<div class="col-md-2 col-3 icon-left__col">
+							<img class="box__icon-lg--left" src="img/tpl/drive.svg" alt="">
+						</div>
+						<div class="col-lg-8 col-md-9 offset-md-2">
+							<div class="icon-left__margin">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.</p>
+								<div class="progress-lg__container">
+									<div class="progress progress-lg">
+										<!-- bar-->
+										<div class="progress-bar bg-yellow" style="width: 60%">
+											<!-- min--><b class="progress__min">0<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+											<!-- number--><b class="progress__number">3</b>
+										</div>
+										<!-- max--><b class="progress__max">5<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- accordion-->
+					<div id="accordion-drive">
+						<div class="accordion">
+							<!-- togglers-->
+							<p class="collapse-tags text-right clearfix tags--mobile-half-width">
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#questions-drive"><i class="tag__icon fa fa-question"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#submotivators-drive"><i class="tag__icon fa fa-bar-chart"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+							</p>
+							<!-- questions-->
+							<div class="box-collapse collapse" data-parent="#accordion-drive" id="questions-drive">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="box-question">
+												<h4>Question lorem ipsum</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus ea, error tempore ducimus, repellat veniam amet dicta ipsum, vel eos aut praesentium porro neque, ipsam minus autem tenetur! Eum!?</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas velit porro, ratione debitis aspernatur. Corporis dicta sed, iste exercitationem quibusdam illum id, porro! Voluptatibus asperiores accusamus eaque maiores animi!?</p>
+											</div>
+											<div class="box-question">
+												<h4>How to lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, excepturi.?</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod magnam architecto et, nemo, distinctio quas tenetur facere sapiente reprehenderit, necessitatibus ab. Molestias doloribus, neque natus!?</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ questions-->
+							<!-- submotivators-->
+							<div class="box-collapse collapse" data-parent="#accordion-drive" id="submotivators-drive">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="progress__items">
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-yellow" style="width: 0%"></div>
+														</div><b class="progress__text">0.0</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-yellow" style="width: 50%"></div>
+														</div><b class="progress__text">2.5</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-yellow" style="width: 100%"></div>
+														</div><b class="progress__text">5.0</b>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ submotivators-->
+						</div>
+					</div>
+					<!--/ accordion-->
+				</div>
+				<!--/.box-->
+				<!--.box-->
+				<div class="box box--border box--pading-lg pb-0 subsection" id="focus">
+					<!-- main content-->
+					<div class="row icon-left__row align-items-center align-items-md-start">
+						<div class="col-lg-8 col-md-9 offset-md-2 col-9">
+							<h2 class="box__title-icon">Focus </h2>
+						</div>
+						<div class="col-md-2 col-3 icon-left__col">
+							<img class="box__icon-lg--left" src="img/tpl/focus.svg" alt="">
+						</div>
+						<div class="col-lg-8 col-md-9 offset-md-2">
+							<div class="icon-left__margin">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.</p>
+								<div class="progress-lg__container">
+									<div class="progress progress-lg">
+										<!-- bar-->
+										<div class="progress-bar bg-blue-light" style="width: 90%">
+											<!-- min--><b class="progress__min">0<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+											<!-- number--><b class="progress__number">4.5</b>
+										</div>
+										<!-- max--><b class="progress__max">5<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- accordion-->
+					<div id="accordion-focus">
+						<div class="accordion">
+							<!-- togglers-->
+							<p class="collapse-tags text-right clearfix tags--mobile-half-width">
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#questions-focus"><i class="tag__icon fa fa-question"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#submotivators-focus"><i class="tag__icon fa fa-bar-chart"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+							</p>
+							<!-- questions-->
+							<div class="box-collapse collapse" data-parent="#accordion-focus" id="questions-focus">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="box-question">
+												<h4>Question lorem ipsum</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus ea, error tempore ducimus, repellat veniam amet dicta ipsum, vel eos aut praesentium porro neque, ipsam minus autem tenetur! Eum!?</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas velit porro, ratione debitis aspernatur. Corporis dicta sed, iste exercitationem quibusdam illum id, porro! Voluptatibus asperiores accusamus eaque maiores animi!?</p>
+											</div>
+											<div class="box-question">
+												<h4>How to lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, excepturi.?</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod magnam architecto et, nemo, distinctio quas tenetur facere sapiente reprehenderit, necessitatibus ab. Molestias doloribus, neque natus!?</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ questions-->
+							<!-- submotivators-->
+							<div class="box-collapse collapse" data-parent="#accordion-focus" id="submotivators-focus">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="progress__items">
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-blue-light" style="width: 0%"></div>
+														</div><b class="progress__text">0.0</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-blue-light" style="width: 50%"></div>
+														</div><b class="progress__text">2.5</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-blue-light" style="width: 100%"></div>
+														</div><b class="progress__text">5.0</b>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ submotivators-->
+						</div>
+					</div>
+					<!--/ accordion-->
+				</div>
+				<!--/.box-->
+				<!--.box-->
+				<div class="box box--border box--pading-lg pb-0 subsection" id="judgment">
+					<!-- main content-->
+					<div class="row icon-left__row align-items-center align-items-md-start">
+						<div class="col-lg-8 col-md-9 offset-md-2 col-9">
+							<h2 class="box__title-icon">Judgment </h2>
+						</div>
+						<div class="col-md-2 col-3 icon-left__col">
+							<img class="box__icon-lg--left" src="img/tpl/judgment.svg" alt="">
+						</div>
+						<div class="col-lg-8 col-md-9 offset-md-2">
+							<div class="icon-left__margin">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta soluta sunt, eligendi ab perspiciatis.</p>
+								<div class="progress-lg__container">
+									<div class="progress progress-lg">
+										<!-- bar-->
+										<div class="progress-bar bg-green" style="width: 100%">
+											<!-- min--><b class="progress__min">0<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+											<!-- number--><b class="progress__number">5.0</b>
+										</div>
+										<!-- max--><b class="progress__max">5<span class="progress__min-max-text"><img class="mb-1" src="img/tpl/triangle-up.png" alt="" width="6"/><br/>Lorem ipsum dolor</span></b>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- accordion-->
+					<div id="accordion-inspiration">
+						<div class="accordion">
+							<!-- togglers-->
+							<p class="collapse-tags text-right clearfix tags--mobile-half-width">
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#questions-inspiration"><i class="tag__icon fa fa-question"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+								<!-- toggler--><a class="tag tag--xs tag--icon-changing" href="#0" data-toggle="collapse" data-target="#submotivators-inspiration"><i class="tag__icon fa fa-bar-chart"></i><i class="tag__icon tag__icon--right icon--dropdown fa fa-chevron-down"></i></a>
+							</p>
+							<!-- questions-->
+							<div class="box-collapse collapse" data-parent="#accordion-inspiration" id="questions-inspiration">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="box-question">
+												<h4>Question lorem ipsum</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit repellendus ea, error tempore ducimus, repellat veniam amet dicta ipsum, vel eos aut praesentium porro neque, ipsam minus autem tenetur! Eum!?</p>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas velit porro, ratione debitis aspernatur. Corporis dicta sed, iste exercitationem quibusdam illum id, porro! Voluptatibus asperiores accusamus eaque maiores animi!?</p>
+											</div>
+											<div class="box-question">
+												<h4>How to lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, excepturi.?</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod magnam architecto et, nemo, distinctio quas tenetur facere sapiente reprehenderit, necessitatibus ab. Molestias doloribus, neque natus!?</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ questions-->
+							<!-- submotivators-->
+							<div class="box-collapse collapse" data-parent="#accordion-inspiration" id="submotivators-inspiration">
+								<div class="box-collapse__content">
+									<div class="row justify-content-lg-center justify-content-md-end">
+										<div class="col-md-8 col-md-10">
+											<div class="progress__items">
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-green" style="width: 0%"></div>
+														</div><b class="progress__text">0.0</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-green" style="width: 50%"></div>
+														</div><b class="progress__text">2.5</b>
+													</div>
+												</div>
+												<div class="progress__item">
+													<h5>Lorem Ipsum Dolor</h5>
+													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum</p>
+													<div class="progress__container">
+														<div class="progress progress--md">
+															<div class="progress-bar bg-green" style="width: 100%"></div>
+														</div><b class="progress__text">5.0</b>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/ submotivators-->
+						</div>
+					</div>
+					<!--/ accordion-->
+				</div>
+				<!--/.box-->
+				<div class="row">
+					<div class="col-md-6 subsection">
+						<!--.box-->
+						<div class="box box--border box--pading-lg h-100" id="leadership">
+							<!--.subsection-->
+							<div class="subsection">
+								<!-- main content-->
+								<div class="row align-items-center">
+									<div class="col-md-4 order-2 order-md-1 col-3">
+										<img class="img-fluid" src="img/tpl/leadership.svg" alt="">
+									</div>
+									<div class="col-md-8 order-1 order-md-2 col-9">
+										<h2 class="mb-0">Leadership Style  </h2>
+									</div>
+								</div>
+							</div>
+							<!--/.subsection-->
+							<!--content-->
+							<h4>Transformational</h4>
+							<p>Sees the opportunity to motivate and engage others through establishing a shared vision for the future.  Trusts others and understands that people are motivated intrinsically and as a leader, it is their job to support and encourage to accomplish
+								shared goals.</p>
+						</div>
+						<!--/.box-->
+					</div>
+					<div class="col-md-6 subsection">
+						<!--.box-->
+						<div class="box box--border box--pading-lg h-100" id="passions">
+							<!--.subsection-->
+							<div class="subsection">
+								<!-- main content-->
+								<div class="row align-items-center text-md-right">
+									<div class="col-md-8 col-9">
+										<h2 class="mb-0">Personal Passions</h2>
+									</div>
+									<div class="col-md-4 col-3">
+										<img class="img-fluid" src="img/tpl/passions.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<!--/.subsection-->
+							<!--content-->
+							<ul class="list-icons list-unstyled">
+								<li class="list-icons__item">
+									<div class="list-icons__icon">
+										<img src="img/tpl/fire.svg" alt="">
+									</div>
+									<div>Coaching and mentoring young professionals</div>
+								</li>
+								<li class="list-icons__item">
+									<div class="list-icons__icon">
+										<img src="img/tpl/fire.svg" alt="">
+									</div>
+									<div>Creating and leading great teams to overachieve results</div>
+								</li>
+							</ul>
+						</div>
+						<!--/.box-->
+					</div>
+				</div>
+				<!--.box-->
+				<div class="box box--border box--pading-lg pb-0 subsection" id="core-values">
+					<!-- main content-->
+					<div class="row icon-left__row align-items-center align-items-md-start">
+						<div class="col-lg-10 col-md-10 offset-md-2 col-9">
+							<h2 class="box__title-icon">Core Values </h2>
+						</div>
+						<div class="col-md-2 col-3 icon-left__col">
+							<img class="box__icon-lg--left" src="img/tpl/core-values.svg" alt="">
+						</div>
+						<div class="col-lg-10 col-md-10 offset-md-2">
+							<div class="icon-left__margin">
+								<p><span class="tag-sm tag-info">Respect</span><span class="tag-sm tag-info">Trust</span><span class="tag-sm tag-info">Integrity</span><span class="tag-sm tag-info">Self-Mastery</span><span class="tag-sm tag-info">Responsibility</span><span class="tag-sm tag-info">Service</span>
+									<span
+									class="tag-sm tag-info">Communication</span><span class="tag-sm tag-info">Relationships</span><span class="tag-sm tag-info">Team</span><span class="tag-sm tag-info">Empathy</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/.box-->
+			</div>
+		</main>
+		<!--/.main-->
+	</div>
+	<!--/.page-content-->
+	<!--To top-->
+	<div class="to-top__container">
+		<div class="container">
+			<a class="to-top box--shadow-hover js-to-top" href="#">
+				<img src="img/tpl/to-top.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<!-- Scripts-->
+	<!-- jQuery-->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Framework-->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Custom-->
+	<script src="js/main.js"></script>
+</body>
+
+</html>

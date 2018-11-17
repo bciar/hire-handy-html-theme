@@ -1,0 +1,38 @@
+//.filters.pug
+
+.filters-container
+
+	.box-list
+		
+		// simple tag
+		a.tag(href="#0")
+			.tag__text A-Z
+			i.fa.tag__icon.tag__icon--right.fa-exchange
+		
+		// tag dropdown		
+		.tag__dropdown.dropdown
+			
+			// not .active is hidden until click
+			a.tag.tag--by.tag--dropdown(href="#0" data-toggle="dropdown")
+				.tag__text Filter by
+				i.fa.tag__icon.tag__icon--right.tag__dropdown-icon.fa-chevron-down
+
+			// .active is visible
+			a.tag.tag--by.tag--dropdown.active(href="#0" data-toggle="dropdown")
+				div
+					img.tag__icon.tag__icon--left(src="img/tpl/inspiration.png", alt="")
+					.tag__text Top Inspiration
+				i.fa.tag__icon.tag__icon--right.fa-close
+			
+			// menu
+			.dropdown-menu
+					
+				+icon-text-group("shortlisted.png", "Shortlisted Candidates")
+				+icon-text-group("networking.png", "Top Collaboration")
+				+icon-text-group("emphathy.png", "Top Empathy")
+				+icon-text-group("drive.png", "Top Drive")
+				+icon-text-group("focus.png", "Top Focus")
+				+icon-text-group("inspiration.png", "Top Inspiration")
+				+icon-text-group("leadership.png", "Leadership Style")
+
+///.filters.pug

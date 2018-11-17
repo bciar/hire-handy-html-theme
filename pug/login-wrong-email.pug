@@ -1,0 +1,35 @@
+extends templates/template-login.pug
+
+block content
+
+	
+	//.form-alerts-container - errors alerts
+	.form-alerts-container
+		
+		// .form-alert is hidden by default. add class .is-visible to show it
+		p.form-alert.is-visible
+			| We couldn’t find an account associated with that email
+
+		p.form-alert.is-visible
+			| Try again or contact your administrator
+	
+	///.form-alerts-container
+
+
+	+login-top
+
+	form
+		
+		p
+			// use class .is-invalid for error state
+			input.form-control.invalid-demo(type="text" placeholder="Email")
+
+		p
+			input.form-control(type="password" placeholder="Password")
+
+		+login-form-bottom
+				
+
+			
+
+

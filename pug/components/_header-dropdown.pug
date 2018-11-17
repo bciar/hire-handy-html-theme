@@ -1,0 +1,212 @@
+
+//.header - _header.pug
+header.header
+
+
+	//.header-mobile - visible in tablet/mobile
+	.header-mobile.d-lg-none
+
+		.container
+
+			.row.align-items-center
+
+				.col-lg-2.col-6
+
+					//.logo
+					a(href="dashboard-home.html")
+						img.logo(src="img/tpl/logo.svg", alt="Hire Humanly")
+				
+				//menu button
+				.col-6
+
+					+b.BUTTON.navbar-toggler.js-navbar-show(type='button' data-target='#menu-2')
+						span
+							+e.SPAN.line
+							+e.SPAN.line
+							+e.SPAN.line
+
+	///.header-mobile
+
+	
+	//.navbar-custom
+	nav.navbar-custom.navbar-expand-lg
+		
+		//.navbar-collapse
+		.navbar-collapse.collapse#menu-2
+
+			//overlay with close option
+			.navbar-collapse__overlay.js-navbar-hide(data-target='#menu-2')
+			
+			//scroll-container
+			.navbar-collapse__scroll-container
+
+				//mobile close
+				.clearfix.d-lg-none
+
+					+b.BUTTON.navbar-toggler.js-navbar-hide(type='button' data-target='#menu-2')
+						span
+							+e.SPAN.line
+							+e.SPAN.line
+							+e.SPAN.line
+
+				.container.navbar-collapse__scroll-container--inner
+
+					.row.align-items-center.navbar-collapse__row
+						
+						// this logo is visible in desktop
+						.col-lg-2.col-6.d-none.d-lg-block
+
+							//.logo
+							a(href="dashboard-home.html")
+								img.logo(src="img/tpl/logo.svg", alt="Hire Humanly")
+						
+
+						.col-lg-8.navbar-collapse__col
+
+							//menu
+							// add class 'active' to 'nav-item' for active properties
+							ul.navbar-nav.justify-content-center
+
+								li.nav-item.active: a.nav-link(href='dashboard-home.html'): span.nav-link__text Home
+								li.nav-item: a.nav-link(href='jobs-board.html'): span.nav-link__text Jobs
+								li.nav-item: a.nav-link(href='candidates-board.html'): span.nav-link__text Candidates
+								
+								//dropdown
+								li.nav-item.dropdown
+									a.nav-link.dropdown-toggle(href='#0', data-toggle='dropdown')
+										span.nav-link__text Interviews
+										i.dropdown-icon.fa.fa-angle-down.d-none.d-lg-inline
+										i.dropdown-icon.fa.fa-angle-right.d-lg-none
+									
+									ul.dropdown-menu
+										li.d-lg-none
+											//dropdown close
+											.navbar-collapse__button.btn.btn-link.btn-md.js-dropdown-collapse
+												i.fa.fa-angle-left
+										li.nav-item
+											a.nav-link(href='#0') Interview Link
+										li.nav-item
+											a.nav-link(href='#0') Interview Link
+										li.nav-item
+											a.nav-link(href='#0') Interview Link
+										li.nav-item
+											a.nav-link(href='#0') Interview Link
+										li.nav-item
+											a.nav-link(href='#0') Interview Link
+								///dropdown
+								
+								//dropdown
+								li.nav-item.dropdown
+									a.nav-link.dropdown-toggle(href='#0', data-toggle='dropdown')
+										span.nav-link__text Dropdown
+										i.dropdown-icon.fa.fa-angle-down.d-none.d-lg-inline
+										i.dropdown-icon.fa.fa-angle-right.d-lg-none
+									
+									ul.dropdown-menu
+										li.d-lg-none
+											//dropdown close
+											.navbar-collapse__button.btn.btn-link.btn-md.js-dropdown-collapse
+												i.fa.fa-angle-left
+										li.nav-item.active
+											a.nav-link(href='#0') Dropdown Link
+										li.nav-item
+											a.nav-link(href='#0') Dropdown Link
+										li.nav-item
+											a.nav-link(href='#0') Dropdown Link
+										li.nav-item
+											a.nav-link(href='#0') Dropdown Link
+										li.nav-item
+											a.nav-link(href='#0') Dropdown Link
+								///dropdown
+
+
+						.col-lg-2.navbar-collapse__col
+
+							//.right-menu - notifications and user menu
+							.right-menu.d-lg-flex.align-items-lg-center.justify-content-lg-end
+
+
+								//.notifications-dropdown
+								.right-menu__item.dropdown.notifications-dropdown
+									
+									a.notifications-dropdown__toggle.nav-item(href="#0", data-toggle='dropdown')
+										
+										//visible in mobile
+										.d-lg-none.nav-link
+											span.nav-link__text Notifications
+											i.dropdown-icon.fa.fa-angle-right
+										
+										// hide bell in mobile
+										i.notifications-dropdown__icon.fa.fa-bell-o.d-none.d-lg-inline
+
+										// indicator of unread notifications
+										i.fa.fa-circle.notifications-dropdown__unread-indicator.d-none.d-lg-inline
+
+									
+									ul.dropdown-menu.dropdown-menu-right.notifications-dropdown__menu
+
+										mixin notification-item(text)
+										
+											li.nav-item
+												//.notification
+												a.nav-link.notification.container-fluid.d-flex.justify-content-between(href="#0")
+													p.notification__text= text
+													i.notification__close.fa.fa-close
+												///.notification
+										
+										li.d-lg-none
+											//dropdown close
+											.navbar-collapse__button.btn.btn-link.btn-md.js-dropdown-collapse
+												i.fa.fa-angle-left
+
+										+notification-item("Notification.  Lorem ipsum dolor sit amet.")
+										+notification-item("Notification.")
+										
+										+notification-item("Notification.  Lorem ipsum dolor sit amet.")
+										+notification-item("Notification.")
+										
+										+notification-item("Notification.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, reprehenderit!")
+										+notification-item("Notification.")
+
+								///.notifications-dropdown
+
+
+								//.user-menu
+								.right-menu__item.dropdown.user-menu
+									a.dropdown-toggle.user-menu__dropdown-toggle.nav-item(href="#0", data-toggle='dropdown')
+										
+										//visible in mobile
+										.d-lg-none.nav-link
+											span.nav-link__text User Menu
+											i.dropdown-icon.fa.fa-angle-right
+
+										// user photo
+										img.user-menu__photo.rounded-circle.d-none.d-lg-inline-block(src="img/media/user.jpg", alt="")
+										
+									
+									ul.dropdown-menu.dropdown-menu-right.user-menu__dropdown-menu
+
+										li.d-lg-none
+											//dropdown close
+											.navbar-collapse__button.btn.btn-link.btn-md.js-dropdown-collapse
+												i.fa.fa-angle-left
+
+										li.nav-item.nav-item-title: span.nav-link: b Chuck Waygood
+										li.nav-item: a.nav-link(href="account-settings-page.html") Settings
+										li.nav-item: a.nav-link(href="teams-page.html") Teams
+										li.nav-item: a.nav-link(href="#0") Concierge Rules
+										li.nav-item: a.nav-link(href="#0") Sign Out
+
+								///.user-menu
+
+
+							///.right-menu
+			
+		///.navbar-collapse
+		
+	///.navbar-custom
+
+
+
+///.header - _header.pug
+
